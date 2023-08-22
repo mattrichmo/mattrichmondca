@@ -4,7 +4,6 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;
 
     --muted: 210 40% 96.1%;
@@ -37,7 +36,34 @@
   }
 
   .dark {
-    --background: 224 71% 4%;
+    --background: linear-gradient(
+      to bottom right,
+      #000000 0%,
+      #0a0f0f 10%,
+      #0f1c1c 20%,
+      #1c2c2c 30%,
+      #2c3c3c 40%,
+      #3c4c4c 50%,
+      #4c5c5c 60%,
+      #5c6c6c 70%,
+      #6c7c7c 80%,
+      #7c8c8c 90%,
+      #0a4a0f 100%
+    );
+    animation: gradient 10s ease infinite;
+  
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
@@ -75,7 +101,8 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background: var(--background);
   }
 }
