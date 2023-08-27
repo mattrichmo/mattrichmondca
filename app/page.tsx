@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
-import Footer from "@/components/footer"
 
 export default function IndexPage() {
   return (
