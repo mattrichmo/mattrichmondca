@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import {SiteFooter} from "@/components/footer"
 
 export const metadata: Metadata = {
   title: {
@@ -29,12 +30,15 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body
+      <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
             fontSans.variable
@@ -46,9 +50,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="flex-1">{children}</div>
             </div>
             <TailwindIndicator />
+            <div className="flex-grow">
+      <SiteFooter />
+      </div>
           </ThemeProvider>
         </body>
-      </html>
-    </>
-  )
+    </html>
+  );
 }

@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
-import Table from "@/app/filmCV/components/table";
+import Table from "@/app/about/film-cv/components/table";
 import Link from "next/link";
 
 export default function FilmCV() {

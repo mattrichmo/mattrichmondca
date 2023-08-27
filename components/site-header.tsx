@@ -1,52 +1,35 @@
 'use client'
-import Link from "next/link"
-import { useState, useEffect } from "react"
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
-import { MainNav } from "@/components/main-nav"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { siteConfig } from "@/config/site";
+import { buttonVariants } from "@/components/ui/button";
+import { Icons } from "@/components/icons";
+import { MainNav } from "@/components/main-nav";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteHeader() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isHidden, setIsHidden] = useState(true)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setIsScrolled(true)
-        setIsHidden(false)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
-        setIsHidden(true)
+        setIsScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsHidden(false)
-    }, 500)
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      clearTimeout(timeout)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full border-b ${
-        isScrolled ? "bg-background" : "bg-transparent"
-      } transition-all duration-300 ease-in-out ${
-        isScrolled ? "shadow-md" : ""
-      } ${isHidden ? "hidden" : ""}`}
+
     >
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <MainNav items={siteConfig.mainNav} />
@@ -87,5 +70,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }

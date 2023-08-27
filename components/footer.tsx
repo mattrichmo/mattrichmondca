@@ -1,72 +1,95 @@
-import React from 'react';
+import Link from "next/link"
+import { siteConfig } from "@/config/site"
+import { buttonVariants } from "@/components/ui/button"
+import { Icons } from "@/components/icons"
 
-const Footer = () => {
-  return (
-    <footer className="bg-black text-white py-10">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-center md:text-left mb-4 md:mb-0">
-          <h1 className="text-3xl font-bold">Matt Richmond</h1>
-          <p className="mt-2">Let's Create.</p>
-        </div>
-        <div className="flex justify-center md:justify-end space-x-4">
-          <a href="#" className="text-white hover:text-gray-300 transition duration-300">Home</a>
-          <a href="#" className="text-white hover:text-gray-300 transition duration-300">About</a>
-          <a href="#" className="text-white hover:text-gray-300 transition duration-300">Services</a>
-          <a href="#" className="text-white hover:text-gray-300 transition duration-300">Contact</a>
-        </div>
-        <div className="mt-6 flex justify-center md:justify-start items-center space-x-4">
-          <a href="#" className="text-white hover:text-gray-300 transition duration-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-6 w-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1}
-                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-6 5l4 4M15 15l-4-4M10 20H4v-6"
-              />
-            </svg>
-          </a>
-          <a href="#" className="text-white hover:text-gray-300 transition duration-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-6 w-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-              />
-            </svg>
-          </a>
-          <a href="#" className="text-white hover:text-gray-300 transition duration-300">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="h-6 w-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+export function SiteFooter (){
+    return (
+        <footer className="bg-background border-t">
+            <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
+                <div className="grid grid-cols-2 gap-2 lg:gap-4 lg:grid-cols-3">
+                    <div className="mr-8">
+                        <div>
+                            <Icons.logo className="h-8 w-8" />
+                        </div>
+                        <p className="mt-4 max-w-xs">
+                            "Learn The Rules Like a Pro, So You Can Break Them Like an Artist." <br /> - Pablo Picasso
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 justify-items-end ml-48">
+                        <div>
+                            <p className="font-medium text-right">Projects</p>
+                            <ul className="mt-6 space-y-4 text-sm text-right">
+                                <li>
+                                    <Link a href="/projects" className=" transition hover:opacity-75">
+                                        What I'm Working On Now
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link a href="/projects/code" className=" transition hover:opacity-75">
+                                      Code 
+                                </Link>
+                                </li>
+                                <li>
+                                    <Link a href="/projects/design" className=" transition hover:opacity-75">
+                                        Design
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link a href="/projects/creative" className=" transition hover:opacity-75">
+                                        Creative
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="font-medium ">Me</p>
+                            <ul className="mt-6 space-y-4 text-sm">
+                                <li>
+                                    <Link a href="/about" className=" transition hover:opacity-75">
+                                        About
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link a href="/contact" className=" transition hover:opacity-75">
+                                        Contact
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link a href="/about/film-cv" className=" transition hover:opacity-75">
+                                        Film CV
+                                    </Link>
+                                    
+                                </li>
+                                <li>
+                                    <Link a href="/link-list" className=" transition hover:opacity-75">
+                                  Link List                                    
+                                  </Link>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="font-medium ">Photography</p>
+                            <ul className="mt-6 space-y-4 text-sm">
+                                <li>
+                                    <Link a href="/photography/selected-galleries" className=" transition hover:opacity-75">
+                                        Favourte Photo Galleries             
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link a href="/photography/external-galleries" className=" transition hover:opacity-75">
+                                        External Galleries              
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p className="text-xs text-gray-500">
+                    &copy; 2023. Matt Richmond, All rights reserved. Made with Love using React, Next.js, TailwindCSS and Shadcn-UI.
+                </p>
+            </div>
+        </footer>
+    )
+}

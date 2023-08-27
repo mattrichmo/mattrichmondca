@@ -30,8 +30,7 @@ export default function IndexPage() {
           </Link>
         </div>
       </section>
-      <div className="flex-grow"></div>
-      <Footer />
+
     </>
   )
 }
