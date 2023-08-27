@@ -3,9 +3,9 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Made by Matt",
+  name: "Matt Richmond",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "My Personal Little Spot On The Internet",
   mainNav: [
     {
       title: "Home",
@@ -16,23 +16,18 @@ export const siteConfig = {
       href: "/about",
     },
     {
-      title: "Blog",
-      href: "/blog",
-    },
-    {
       title: "Contact", 
       href: "/contact"
     },
   ],
   links: {
     twitter: "https://twitter.com/#",
-    github: "https://github.com/#",
+    github: "https://github.com/mattrichmo",
     docs: "https://#.com",
-    facebook: "https://facebook.com/#",
-    linkedin: "https://linkedin.com/#",
-    pinterest: "https://pinterest.com/#",
-    instagram: "https://instagram.com/#",
-    tiktok: "https://tiktok.com/#",
+    facebook: "https://facebook.com/mattrichmo",
+    linkedin: "https://linkedin.com/in/mattrichmo",
+    instagram: "https://instagram.com/mattrichmo",
+    tiktok: "https://tiktok.com/mattrichmo",
     discord: "https://discord.com/#",
   },
 }

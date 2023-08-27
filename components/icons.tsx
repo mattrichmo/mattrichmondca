@@ -3,7 +3,7 @@ import {
   Moon,
   SunMedium,
   Twitter,
-  Instagram,
+  InstagramIcon,
   Facebook,
   Linkedin,
   type Icon as LucideIcon,
@@ -33,7 +33,7 @@ export const Icons = {
     </svg>
     
   ),
-  instagram: Instagram,
+  instagram: InstagramIcon,
   facebook: Facebook,
   linkedin: Linkedin,
   
