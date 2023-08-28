@@ -7,6 +7,7 @@ export default function FilmCV() {
   const [filmsData, setFilmsData] = useState([]);
 
   useEffect(() => {
+    const [filmsData, setFilmsData] = useState<Film[]>([]);
     const spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1T-Wf8mObysBwOsWNM8nOcFtMZtwTHN5Xg-69LtEtKhc/export?format=csv";
 
     fetch(spreadsheetUrl)
