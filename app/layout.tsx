@@ -45,7 +45,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <SiteHeader />
             <main className="flex-auto overflow-auto">{children}</main>
           </div>
-          <SiteFooter className="pb-16"/>
+          <SiteFooter />
         </ThemeProvider>
         
         <TailwindIndicator />
