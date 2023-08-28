@@ -49,7 +49,7 @@ export default function FilmCV() {
       <div className="mb-24 flex max-w-[980px] flex-col items-start gap-4">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl" style={{ lineHeight: "1.5" }}>
           Seasoned, <br className="hidden sm:inline" />
-          but not Crusty, Grip. <br className="hidden sm:inline" /> Let`&apos`s build cool shots. <br className="hidden sm:inline" />
+          but not Crusty, Grip. <br className="hidden sm:inline" /> Let&apos;s build cool shots. <br className="hidden sm:inline" />
           Or view some <Link href="/filmCV/gripshots"><u>grip pics</u></Link> 
         </h1>
       </div>

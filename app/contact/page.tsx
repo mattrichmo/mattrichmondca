@@ -12,7 +12,7 @@ export default function ContactPage () {
           Ready to shake things up?
         </h1>
         <h2 className="text-lg font-extrabold leading-tight tracking-tighter md:text-2xl" style={{ lineHeight: "1.5" }}>
-          Got a wild idea? Let`&apos`s bring it to life.
+          Got a wild idea? Let&apos;s bring it to life.
         </h2>
       </div>
       <div className="mx-12 mt-8 flex flex-row justify-center gap-8 sm:mx-4 md:mx-12">

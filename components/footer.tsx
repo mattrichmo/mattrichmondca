@@ -14,7 +14,7 @@ export function SiteFooter (){
                     <span className="inline-block font-bold">{siteConfig.name}</span>
                     </div>
                         <p className="mt-4 max-w-xs">
-                            `&quot`Learn The Rules Like a Pro, So You Can Break Them Like an Artist.`&quot` <br /> - Pablo Picasso or maybe Buddha
+                            &quot;Learn The Rules Like a Pro, So You Can Break Them Like an Artist.&quot; <br /> - Pablo Picasso or maybe Buddha
                         </p>
                     </div>
                     <div className="ml-48 grid grid-cols-1 justify-items-end gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
@@ -23,7 +23,7 @@ export function SiteFooter (){
                             <ul className="mt-6 space-y-4 text-right text-sm">
                                 <li>
                                     <Link href="/projects" className=" transition hover:opacity-75">
-                                        What I`&apos`m Working On Now
+                                        What I&apos;m Working On Now
                                     </Link>
                                 </li>
                                 <li>
