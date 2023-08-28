@@ -22,22 +22,22 @@ export function SiteFooter (){
                             <p className="font-medium text-right">Projects</p>
                             <ul className="mt-6 space-y-4 text-sm text-right">
                                 <li>
-                                    <Link a href="/projects" className=" transition hover:opacity-75">
+                                    <Link href="/projects" className=" transition hover:opacity-75">
                                         What I'm Working On Now
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link a href="/projects/code" className=" transition hover:opacity-75">
+                                    <Link href="/projects/code" className=" transition hover:opacity-75">
                                       Code 
                                 </Link>
                                 </li>
                                 <li>
-                                    <Link a href="/projects/design" className=" transition hover:opacity-75">
+                                    <Link href="/projects/design" className=" transition hover:opacity-75">
                                         Design
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link a href="/projects/creative" className=" transition hover:opacity-75">
+                                    <Link href="/projects/creative" className=" transition hover:opacity-75">
                                         Creative
                                     </Link>
                                 </li>
@@ -47,17 +47,17 @@ export function SiteFooter (){
                             <p className="font-medium ">Me</p>
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <Link a href="/about" className=" transition hover:opacity-75">
+                                    <Link href="/about" className=" transition hover:opacity-75">
                                         About
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link a href="/contact" className=" transition hover:opacity-75">
+                                    <Link href="/contact" className=" transition hover:opacity-75">
                                         Contact
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link a href="/about/film-cv" className=" transition hover:opacity-75">
+                                    <Link href="/about/film-cv" className=" transition hover:opacity-75">
                                         Film CV
                                     </Link>
                                     
@@ -74,12 +74,12 @@ export function SiteFooter (){
                             <p className="font-medium ">Photography</p>
                             <ul className="mt-6 space-y-4 text-sm">
                                 <li>
-                                    <Link a href="/photo/selected-galleries" className=" transition hover:opacity-75">
+                                    <Link href="/photo/selected-galleries" className=" transition hover:opacity-75">
                                         Favourte Photo Galleries             
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link a href="/photo/external-galleries" className=" transition hover:opacity-75">
+                                    <Link href="/photo/external-galleries" className=" transition hover:opacity-75">
                                         External Galleries              
                                     </Link>
                                 </li>
