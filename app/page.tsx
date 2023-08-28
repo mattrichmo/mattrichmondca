@@ -14,7 +14,7 @@ export default function IndexPage() {
       <div className="flex max-w-[980px] flex-col items-start gap-4">
         <h1 className="font-lora text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl">
           Hi, My Name Is Matt. <br className="hidden sm:inline" />
-          This is my website, and it's continually under development, always changing as I try new technologies out. <br />
+          This is my website, and it`&aopos`s continually under development, always changing as I try new technologies out. <br />
           To get a better idea of who I am, you can check out my
           <Link href={siteConfig.links.github} className="mx-1 underline hover:text-blue-500 hover:underline">
             GitHub,
