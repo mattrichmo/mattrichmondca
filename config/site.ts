@@ -25,7 +25,7 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/in/mattrichmo",
     instagram: "https://instagram.com/mattrichmo",
     tiktok: "https://tiktok.com/mattrichmo",
-    discord: "https://discord.com/#",
+    discord: "https://discord.com/#/",
     pexels: "https://www.pexels.com/@mattrichmo-314917881"
   },
 }
