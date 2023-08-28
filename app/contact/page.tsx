@@ -97,8 +97,8 @@ export default function ContactPage () {
       </div>
       <div className="mb-4">
         <label htmlFor="message" className="block  font-bold mb-2">Message</label>
-        <textarea id="message" name="message" rows="4" className="w-full border border-black p-2 rounded-lg "></textarea>
-      </div>
+        <textarea id="message" name="message" rows={4} className="w-full border border-black p-2 rounded-lg "></textarea>
+              </div>
       <button type="submit" className="bg-white text-black font-bold py-2 px-4 rounded-lg hover:bg-gray-200 transition duration-200">Send Message</button>
     </form>
   </div>
