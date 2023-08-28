@@ -1,13 +1,22 @@
-'use client'
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Table from "@/app/about/film-cv/components/table";
 import Link from "next/link";
 
 export default function FilmCV() {
-  const [filmsData, setFilmsData] = useState([]);
+  // Define the Film type inline
+  type Film = {
+    date: string;
+    title: string;
+    director: string;
+    dop: string;
+    keyGrip: string;
+    role: string;
+    type: string;
+  };
+
+  const [filmsData, setFilmsData] = useState<Film[]>([]);
 
   useEffect(() => {
-    const [filmsData, setFilmsData] = useState<Film[]>([]);
     const spreadsheetUrl = "https://docs.google.com/spreadsheets/d/1T-Wf8mObysBwOsWNM8nOcFtMZtwTHN5Xg-69LtEtKhc/export?format=csv";
 
     fetch(spreadsheetUrl)
