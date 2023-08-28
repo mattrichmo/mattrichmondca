@@ -1,3 +1,11 @@
+
+import { Lora } from 'next/font/google';
+
+const lora = Lora({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-lora',
+});
 export default function ProjectList () {
   return (
     <section className={`h-screen flex flex-col justify-center items-center gap-6 pb-8 pt-6 md:py-10 ${lora.variable}`}>
