@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import Table from "@/app/about/film-cv/components/table";
 import Link from "next/link";
