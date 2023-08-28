@@ -36,12 +36,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body
         className={cn(
-          "flex flex-col min-h-screen bg-background font-sans antialiased",
+          "flex min-h-screen flex-col bg-background font-sans antialiased",
           fontSans.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col flex-1 pb-16">
+          <div className="flex flex-1 flex-col pb-16">
             <SiteHeader />
             <main className="flex-auto overflow-auto">{children}</main>
           </div>

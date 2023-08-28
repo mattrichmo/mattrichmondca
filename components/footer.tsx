@@ -5,25 +5,25 @@ import { Icons } from "@/components/icons"
 
 export function SiteFooter (){
     return (
-        <footer className="bg-background border-t">
+        <footer className="border-t bg-background">
             <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
-                <div className="grid grid-cols-2 gap-2 lg:gap-4 lg:grid-cols-3">
+                <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-4">
                     <div className="mr-8">
                     <div className="flex items-center">
                     <Icons.logo className="h-8 w-8" />
                     <span className="inline-block font-bold">{siteConfig.name}</span>
                     </div>
                         <p className="mt-4 max-w-xs">
-                            "Learn The Rules Like a Pro, So You Can Break Them Like an Artist." <br /> - Pablo Picasso
+                            `&quot`Learn The Rules Like a Pro, So You Can Break Them Like an Artist.`&quot` <br /> - Pablo Picasso or maybe Buddha
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 justify-items-end ml-48">
+                    <div className="ml-48 grid grid-cols-1 justify-items-end gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
                         <div>
-                            <p className="font-medium text-right">Projects</p>
-                            <ul className="mt-6 space-y-4 text-sm text-right">
+                            <p className="text-right font-medium">Projects</p>
+                            <ul className="mt-6 space-y-4 text-right text-sm">
                                 <li>
                                     <Link href="/projects" className=" transition hover:opacity-75">
-                                        What I'm Working On Now
+                                        What I`&apos`m Working On Now
                                     </Link>
                                 </li>
                                 <li>
