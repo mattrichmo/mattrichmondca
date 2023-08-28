@@ -53,7 +53,54 @@ export default function Table({ filmsData }: Props) {
             {sortColumn === "date" &&
               (sortDirection === "asc" ? "▲" : "▼")}
           </TableHead>
-          {/* Repeat the rest of the TableHead elements for other columns */}
+          <TableHead
+            className="w-2/7"
+            onClick={() => handleSort("title")}
+          >
+            Title{" "}
+            {sortColumn === "title" &&
+              (sortDirection === "asc" ? "▲" : "▼")}
+          </TableHead>
+          <TableHead
+            className="w-1/7"
+            onClick={() => handleSort("director")}
+          >
+            Director{" "}
+            {sortColumn === "director" &&
+              (sortDirection === "asc" ? "▲" : "▼")}
+          </TableHead>
+          <TableHead
+            className="w-1/7"
+            onClick={() => handleSort("dop")}
+          >
+            DOP{" "}
+            {sortColumn === "dop" &&
+              (sortDirection === "asc" ? "▲" : "▼")}
+          </TableHead>
+          <TableHead
+            className="w-1/7"
+            onClick={() => handleSort("keyGrip")}
+          >
+            Key Grip{" "}
+            {sortColumn === "keyGrip" &&
+              (sortDirection === "asc" ? "▲" : "▼")}
+          </TableHead>
+          <TableHead
+            className="w-1/7"
+            onClick={() => handleSort("role")}
+          >
+            Role{" "}
+            {sortColumn === "role" &&
+              (sortDirection === "asc" ? "▲" : "▼")}
+          </TableHead>
+          <TableHead
+            className="w-1/7"
+            onClick={() => handleSort("type")}
+          >
+            Type{" "}
+            {sortColumn === "type" &&
+              (sortDirection === "asc" ? "▲" : "▼")}
+          </TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -81,7 +128,11 @@ export default function Table({ filmsData }: Props) {
                   <TableCell className="font-medium">
                     {film.title}
                   </TableCell>
-                  {/* Repeat the rest of the TableCell elements for other columns */}
+                  <TableCell>{film.director}</TableCell>
+                  <TableCell>{film.dop}</TableCell>
+                  <TableCell>{film.keyGrip}</TableCell>
+                  <TableCell>{film.role}</TableCell>
+                  <TableCell>{film.type}</TableCell>
                 </TableRow>
               ))}
           </React.Fragment>
