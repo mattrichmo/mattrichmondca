@@ -8,17 +8,14 @@ export const siteConfig = {
     "My Personal Little Spot On The Internet",
   mainNav: [
     {
-      title: "Home",
-      href: "/",
-    },
-    {
       title: "About",
       href: "/about",
     },
     {
-      title: "Contact", 
+      title: "Contact",
       href: "/contact"
-    },
+
+    }
   ],
   links: {
     twitter: "https://twitter.com/#",
@@ -29,5 +26,6 @@ export const siteConfig = {
     instagram: "https://instagram.com/mattrichmo",
     tiktok: "https://tiktok.com/mattrichmo",
     discord: "https://discord.com/#",
+    pexels: "https://www.pexels.com/@mattrichmo-314917881"
   },
 }

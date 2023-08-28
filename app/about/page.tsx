@@ -11,29 +11,22 @@ export default function AboutPage() {
       </div>
       <div className="flex max-w flex-col items-start gap-4 ml-12 mr-12 lg:ml-12 sm:ml-4 lg:mr-12 sm:mr-4">
         <p className="text-md font-serif max-w-[800px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim est vitae semper luctus.
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-          Suspendisse varius, nulla nec condimentum vulputate, augue tortor facilisis purus, at eleifend libero mi eu metus.
-          Suspendisse tristique augue ut nisi eleifend malesuada. Cras vel nibh purus. Quisque at massa eu arcu facilisis rhoncus.
-          Vivamus dignissim urna in quam gravida, vel eleifend eros varius.
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-          Ut posuere pellentesque vestibulum. Sed et dapibus erat, ut tincidunt erat.
-          Fusce at pharetra mauris. Nullam ac eros non purus hendrerit tincidunt.
-          Ut tincidunt bibendum libero, non pharetra justo tincidunt eu. Maecenas malesuada efficitur elit, id lacinia ligula.
-          Vivamus eleifend hendrerit dictum.
+        Throughout my journey, I've truly embodied the roles of a "Creator" and "Builder," traits that have defined my path. My recent experiences have been quite diverse; during the pandemic, I immersed myself in the Vancouver film industry as a Grip, contributing to the magic of visual storytelling behind the scenes. Before that, I found myself engaged in brand-building endeavors within the dynamic landscape of Aurora Cannabis. Reflecting on my journey, I ventured into entrepreneurship with my own company, a venture that might not have reached the heights I envisioned, but one that undoubtedly enriched me with invaluable lessons.        </p>
+      </div>
+      
+      <div className="flex max-w flex-col items-start gap-4 ml-12 mr-12 lg:ml-12 sm:ml-4 lg:mr-12 sm:mr-4">
+          <p className="text-md font-serif max-w-[800px]">
+          My earlier days were marked by a deep involvement in creating brands, an arena where my passion for shaping concepts into something substantial truly shone. Each step has added to my arsenal of skills—whether it was the art of crafting compelling narratives in the film industry, establishing resonant brand identities, or navigating the complexities of running a business.
         </p>
       </div>
       <div className="flex max-w flex-col items-start gap-4 ml-12 mr-12 lg:ml-12 sm:ml-4 lg:mr-12 sm:mr-4">
-        <h2 className="text-md font-extrabold leading-tight tracking-tighter md:text-2xl" style={{ lineHeight: "1.5" }}>
-          Happiest When Building.
+        <h2 className="text-sm font-extrabold leading-tight tracking-tighter md:text-lg" style={{ lineHeight: "1.5" }}>
+          Happiest When Creating With Like-minded People
         </h2>
       </div>
       <div className="flex max-w flex-col items-start gap-4 ml-12 mr-12 lg:ml-12 sm:ml-4 lg:mr-12 sm:mr-4">
           <p className="text-md font-serif max-w-[800px]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec augue vel turpis pellentesque tincidunt vel at libero.
-          Proin pharetra, augue ac blandit commodo, arcu justo blandit mi, a commodo orci felis a urna.
-          Nullam facilisis nisi in arcu luctus, eu tincidunt nulla vulputate. Fusce nec massa ut tellus luctus accumsan ac in elit.
-          Etiam et velit ipsum. Integer a orci libero. Sed rhoncus, ante ac efficitur commodo, neque libero vehicula orci, a posuere erat felis et justo.
+          As I gaze ahead, my enthusiasm for both creating and building remains undiminished. I am driven to channel my creativity and drive into future projects that embody this innate passion. There's an undeniable thrill in taking an idea, nurturing it, and bringing it into existence. With my background as a testament to my dedication, I eagerly anticipate the opportunity to continue this journey of transforming imagination into reality, leaving a trail of meaningful accomplishments along the way.
         </p>
       </div>
       <div className="flex max-w justify-center mt-12 mb-auto">
