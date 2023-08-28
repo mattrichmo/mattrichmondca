@@ -30,23 +30,21 @@ export default function Table({ filmsData }: Props) {
     return acc;
   }, [] as { type: string; films: Film[] }[]);
 
-  const sortedGroups = groups.map((group) => {
-    const sortedFilms = group.films.sort((a, b) => {
-      if (sortColumn === null) {
-        return 0;
-      }
-      const aValue = a[sortColumn];
-      const bValue = b[sortColumn];
-      if (aValue < bValue) {
-        return sortDirection === "asc" ? -1 : 1;
-      } else if (aValue > bValue) {
-        return sortDirection === "asc" ? 1 : -1;
-      } else {
-        return 0;
-      }
-    });
-    return { type: group.type, films: sortedFilms };
+  const sortedFilms = group.films.sort((a, b) => {
+    if (sortColumn === null) {
+      return 0;
+    }
+    const aValue = a[sortColumn as keyof Film];
+    const bValue = b[sortColumn as keyof Film];
+    if (aValue < bValue) {
+      return sortDirection === "asc" ? -1 : 1;
+    } else if (aValue > bValue) {
+      return sortDirection === "asc" ? 1 : -1;
+    } else {
+      return 0;
+    }
   });
+  
 
   const handleSort = (column: string) => {
     if (sortColumn === column) {
