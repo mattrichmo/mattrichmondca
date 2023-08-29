@@ -19,7 +19,7 @@ export function MobileNav({ items, onItemClick }: MobileNavProps) {
   };
 
   return (
-    <div className="flex h-full flex-col items-center justify-center space-y-4">
+    <div className="flex h-full flex-col items-center mt-24 space-y-4">
       <Link 
       href="/" 
       className="mb-12 flex items-center space-x-2"

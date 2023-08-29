@@ -32,6 +32,12 @@ export function SiteHeader() {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    document.body.style.overflowY = isMobileMenuOpen ? "auto" : "hidden";
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    document.body.style.overflowY = "auto";
   };
 
   return (
@@ -73,6 +79,7 @@ export function SiteHeader() {
                   size: "icon",
                   variant: "ghost",
                 })}
+                onClick={closeMobileMenu}
               >
                 <Icons.gitHub className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
@@ -88,6 +95,7 @@ export function SiteHeader() {
                   size: "icon",
                   variant: "ghost",
                 })}
+                onClick={closeMobileMenu}
               >
                 <Icons.instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
@@ -100,7 +108,7 @@ export function SiteHeader() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed left-0 top-0 h-full w-full bg-white dark:bg-black ">
+        <div className="dark:bg-dark fixed left-0 top-0 h-full w-full bg-white dark:bg-black">
           <div className="ml-3 mt-1 flex p-4">
             <Button
               onClick={toggleMobileMenu}
@@ -113,7 +121,7 @@ export function SiteHeader() {
               <span className="sr-only">Close menu</span>
             </Button>
           </div>
-          <MobileNav items={siteConfig.mainNav} />
+          <MobileNav items={siteConfig.mainNav} onItemClick={closeMobileMenu} />
         </div>
       )}
     </header>
