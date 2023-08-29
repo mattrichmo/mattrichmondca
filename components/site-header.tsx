@@ -108,7 +108,7 @@ export function SiteHeader() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="dark:bg-dark fixed left-0 top-0 h-full w-full bg-white dark:bg-black">
+        <div className="dark:bg-dark fixed z-50 left-0 top-0 h-full w-full bg-white dark:bg-black">
           <div className="ml-3 mt-1 flex p-4">
             <Button
               onClick={toggleMobileMenu}
