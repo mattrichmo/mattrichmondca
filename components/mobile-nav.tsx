@@ -26,11 +26,11 @@ export function MobileNav({ items, onItemClick }: MobileNavProps) {
       onClick={handleItemClick}
       >
         <Icons.logo className="h-12 w-12" />
-        <span className="inline-block text-xl font-bold">{siteConfig.name}</span>
+        <span className="inline-block text-xl font-bold text-foreground">{siteConfig.name}</span>
       </Link>
       <div className="mt-12 flex">
         {items?.length ? (
-          <nav className="flex flex-col items-center space-y-4 text-xl sm:text-xl">
+          <nav className="flex flex-col items-center space-y-4 text-xl sm:text-xl text-foreground">
             {items?.map(
               (item, index) =>
                 item.href && (
