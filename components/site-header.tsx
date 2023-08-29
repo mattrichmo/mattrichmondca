@@ -1,4 +1,3 @@
-'use client'
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -10,6 +9,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,13 +27,34 @@ export function SiteHeader() {
     };
   }, []);
 
-  return (
-    <header
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
-    >
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
+  return (
+    <header>
+      <div className={`container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+        {/* Mobile Menu Icon */}
+        <div className="sm:hidden">
+          <button
+            onClick={toggleMobileMenu}
+            className={buttonVariants({
+              size: "icon",
+              variant: "ghost",
+            })}
+          >
+            <Icons.menu className="h-5 w-5" />
+            <span className="sr-only">Menu</span>
+          </button>
+        </div>
+
+        {/* Main Nav (Visible on non-mobile) */}
+        {!isMobileMenuOpen && (
+          <MainNav items={siteConfig.mainNav} />
+        )}
+
+        {/* Icons and Theme Toggle */}
+        <div className={`flex flex-1 items-center justify-end space-x-4 ${isMobileMenuOpen ? 'hidden' : 'sm:flex'}`}>
           <nav className="flex items-center space-x-1">
             <Link
               href={siteConfig.links.github}
@@ -69,6 +90,20 @@ export function SiteHeader() {
           </nav>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-white">
+          <nav className="p-4">
+            <ul className="space-y-2">
+              <li>
+                <Link href="#">Use Client</Link>
+              </li>
+              {/* Add other menu items here */}
+            </ul>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

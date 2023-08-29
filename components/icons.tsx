@@ -4,6 +4,7 @@ import {
   SunMedium,
   Twitter,
   InstagramIcon,
+  MenuIcon,
   Facebook,
   Linkedin,
   type Icon as LucideIcon,
@@ -36,5 +37,6 @@ export const Icons = {
   instagram: InstagramIcon,
   facebook: Facebook,
   linkedin: Linkedin,
+  menu:MenuIcon
   
 }
