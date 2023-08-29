@@ -8,6 +8,10 @@ import {
   X,
   Facebook,
   Linkedin,
+  ChevronsUpDownIcon,
+  ChevronsLeftRightIcon,
+  ArrowUpRightIcon,
+  GithubIcon,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -26,7 +30,8 @@ export const Icons = {
     </svg>
    
   ),
-  gitHub: (props: LucideProps) => (
+  gitHub: GithubIcon,
+  test: (props: LucideProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path
         fill="currentColor"
@@ -39,6 +44,11 @@ export const Icons = {
   facebook: Facebook,
   linkedin: Linkedin,
   menu:MenuIcon,
-  close: X
+  close: X,
+  chevronsClose: ChevronsUpDownIcon,
+  chevronsOpen: ChevronsLeftRightIcon,
+  arrowUpRight: ArrowUpRightIcon,
+
+
   
 }

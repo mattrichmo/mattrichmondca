@@ -47,16 +47,18 @@ export default function FilmCV() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="mb-24 flex max-w-[980px] flex-col items-start gap-4">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl" style={{ lineHeight: "1.5" }}>
+        <h1 className="mx-4 text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl" style={{ lineHeight: "1.5" }}>
           Seasoned, <br className="hidden sm:inline" />
           but not Crusty, Grip. <br className="hidden sm:inline" /> Let&apos;s build cool shots. <br className="hidden sm:inline" />
-          Or view some <Link href="/filmCV/gripshots"><u>grip pics</u></Link> 
+          
         </h1>
       </div>
-      <h2 className="mb-12 text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl" style={{ lineHeight: "1.5" }}>
+      <h2 className="mx-4 mb-12 text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl" style={{ lineHeight: "1.5" }}>
         Grip Resume 
       </h2>
+      <div className='mb-12 ml-4 mr-4'>
       <Table filmsData={filmsData} />
+      </div>
     </div>
   );
 }

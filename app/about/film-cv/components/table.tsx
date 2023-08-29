@@ -42,7 +42,6 @@ export default function Table({ filmsData }: Props) {
 
   return (
     <UITable>
-      <TableCaption>Grip Resume</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead
