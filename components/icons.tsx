@@ -5,6 +5,7 @@ import {
   Twitter,
   InstagramIcon,
   MenuIcon,
+  X,
   Facebook,
   Linkedin,
   type Icon as LucideIcon,
@@ -37,6 +38,7 @@ export const Icons = {
   instagram: InstagramIcon,
   facebook: Facebook,
   linkedin: Linkedin,
-  menu:MenuIcon
+  menu:MenuIcon,
+  close: X
   
 }
