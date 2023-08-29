@@ -11,52 +11,60 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  // State variables
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+  // Event listeners and handlers
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    document.body.style.overflowY = isMobileMenuOpen ? "auto" : "hidden";
+    toggleVisibility(); // Toggle overlay visibility
   };
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-    document.body.style.overflowY = "auto";
+    setIsVisible(false); // Ensure overlay is closed
   };
+
+  const toggleVisibility = () => {
+    setIsVisible((prev) => !prev);
+  };
+
+
+  // Body scroll management
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+  }, [isMobileMenuOpen]);
+
+  // Icon rendering based on state
+  const mobileMenuIcon = isMobileMenuOpen ? (
+    <Icons.close className="h-5 w-5" />
+  ) : (
+    <Icons.menu className="h-5 w-5" />
+  );
 
   return (
     <header>
+      {/* Header content */}
       <div
-        className={`container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 ${
+        className={`container z-50 flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 ${
           isMobileMenuOpen ? "mobile-menu-open" : ""
         }`}
       >
-        {/* Mobile Menu Icon */}
-        <div className="sm:hidden">
+        {/* Mobile Menu Button */}
+        <div className="md:hidden z-50">
           <Button
             onClick={toggleMobileMenu}
-            className={buttonVariants({
+            className={`${buttonVariants({
               size: "sm",
               variant: "ghost",
-            })}
+            })} z-50`} // Ensure button is on top
           >
-            <Icons.menu className={`h-5 w-5 ${isMobileMenuOpen ? 'menu-open' : ''}`} />
+            {mobileMenuIcon}
             <span className="sr-only">Menu</span>
           </Button>
         </div>
@@ -108,18 +116,9 @@ export function SiteHeader() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="dark:bg-dark fixed z-50 left-0 top-0 h-full w-full bg-white dark:bg-black">
-          <div className="ml-3 mt-1 flex p-4">
-            <Button
-              onClick={toggleMobileMenu}
-              className={buttonVariants({
-                size: "sm",
-                variant: "ghost",
-              })}
-            >
-              <Icons.close className={`h-5 w-5 ${isMobileMenuOpen ? 'menu-open' : ''}`} />
-              <span className="sr-only">Close menu</span>
-            </Button>
+      <div className="z-49 fixed left-0 top-0 h-full w-full bg-white transition-all duration-300 ease-in-out dark:bg-black">          
+      <div className="ml-3 mt-1 flex p-4">
+            
           </div>
           <MobileNav items={siteConfig.mainNav} onItemClick={closeMobileMenu} />
         </div>
