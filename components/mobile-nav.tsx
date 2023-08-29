@@ -22,15 +22,15 @@ export function MobileNav({ items, onItemClick }: MobileNavProps) {
     <div className="flex h-full flex-col items-center justify-center space-y-4">
       <Link 
       href="/" 
-      className="flex items-center space-x-2 mb-12"
+      className="mb-12 flex items-center space-x-2"
       onClick={handleItemClick}
       >
         <Icons.logo className="h-12 w-12" />
         <span className="inline-block font-bold">{siteConfig.name}</span>
       </Link>
-      <div className="flex mt-12">
+      <div className="mt-12 flex">
         {items?.length ? (
-          <nav className="sm:text-xl flex flex-col items-center space-y-4 text-xl">
+          <nav className="flex flex-col items-center space-y-4 text-xl sm:text-xl">
             {items?.map(
               (item, index) =>
                 item.href && (
