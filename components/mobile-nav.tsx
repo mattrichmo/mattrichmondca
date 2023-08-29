@@ -38,7 +38,7 @@ export function MobileNav({ items, onItemClick }: MobileNavProps) {
                     key={index}
                     href={item.href}
                     className={cn(
-                      "flex items-center text-2xl font-bold text-foreground",
+                      "flex items-center text-2xl font-bold",
                       item.disabled && "cursor-not-allowed opacity-80"
                     )}
                     onClick={handleItemClick}
