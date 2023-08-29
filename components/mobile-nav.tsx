@@ -26,7 +26,7 @@ export function MobileNav({ items, onItemClick }: MobileNavProps) {
       onClick={handleItemClick}
       >
         <Icons.logo className="h-12 w-12" />
-        <span className="inline-block font-bold">{siteConfig.name}</span>
+        <span className="inline-block text-xl font-bold">{siteConfig.name}</span>
       </Link>
       <div className="mt-12 flex">
         {items?.length ? (
