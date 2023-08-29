@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,11 +32,21 @@ export function SiteHeader() {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+    document.body.style.overflowY = isMobileMenuOpen ? "auto" : "hidden";
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    document.body.style.overflowY = "auto";
   };
 
   return (
     <header>
-      <div className={`container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+      <div
+        className={`container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0 ${
+          isMobileMenuOpen ? "mobile-menu-open" : ""
+        }`}
+      >
         {/* Mobile Menu Icon */}
         <div className="sm:hidden">
           <Button
@@ -46,7 +56,7 @@ export function SiteHeader() {
               variant: "ghost",
             })}
           >
-            <Icons.menu className="h-5 w-5" />
+            <Icons.menu className={`h-5 w-5 ${isMobileMenuOpen ? 'menu-open' : ''}`} />
             <span className="sr-only">Menu</span>
           </Button>
         </div>
@@ -69,6 +79,7 @@ export function SiteHeader() {
                   size: "icon",
                   variant: "ghost",
                 })}
+                onClick={closeMobileMenu}
               >
                 <Icons.gitHub className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
@@ -84,6 +95,7 @@ export function SiteHeader() {
                   size: "icon",
                   variant: "ghost",
                 })}
+                onClick={closeMobileMenu}
               >
                 <Icons.instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
@@ -96,18 +108,20 @@ export function SiteHeader() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white">
-          <Button
-            onClick={toggleMobileMenu}
-            className={`p-4 ${buttonVariants({
-              size: "sm",
-              variant: "ghost",
-            })}`}
-          >
-            <Icons.close className="h-15 w-15" />
-            <span className="sr-only">Close menu</span>
-          </Button>
-          <MobileNav items={siteConfig.mainNav} />
+        <div className="fixed left-0 top-0 h-full w-full bg-white">
+          <div className="ml-3 mt-1 flex p-4">
+            <Button
+              onClick={toggleMobileMenu}
+              className={buttonVariants({
+                size: "sm",
+                variant: "ghost",
+              })}
+            >
+              <Icons.close className={`h-5 w-5 ${isMobileMenuOpen ? 'menu-open' : ''}`} />
+              <span className="sr-only">Close menu</span>
+            </Button>
+          </div>
+          <MobileNav items={siteConfig.mainNav} onItemClick={closeMobileMenu} />
         </div>
       )}
     </header>

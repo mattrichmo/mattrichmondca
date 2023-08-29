@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 export default function AboutPage() {
   return (
     <section className="flex h-screen flex-col gap-6 pb-8 pt-6 md:py-10">
@@ -11,7 +14,7 @@ export default function AboutPage() {
       </div>
       <div className="max-w mx-12 flex flex-col items-start gap-4 sm:mx-4 lg:mx-12">
         <p className="text-md max-w-[800px] font-serif">
-        Throughout my journey, I&apos;ve truly embodied the roles of a &quot;Creator&quote; and &quot;Builder,&quot; traits that have defined my path. My recent experiences have been quite diverse; during the pandemic, I immersed myself in the Vancouver film industry as a Grip, contributing to the magic of visual storytelling behind the scenes. Before that, I found myself engaged in brand-building endeavors within the dynamic landscape of Aurora Cannabis. Reflecting on my journey, I ventured into entrepreneurship with my own company, a venture that might not have reached the heights I envisioned, but one that undoubtedly enriched me with invaluable lessons.        </p>
+        Throughout my journey, I&apos;ve truly embodied the roles of a &quot;Creator&quot; and &quot;Builder&quot;, traits that have defined my path. My recent experiences have been quite diverse; during the pandemic, I immersed myself in the Vancouver film industry as a Grip, contributing to the magic of visual storytelling behind the scenes. Before that, I found myself engaged in brand-building endeavors within the dynamic landscape of Aurora Cannabis. Reflecting on my journey, I ventured into entrepreneurship with my own company, a venture that might not have reached the heights I envisioned, but one that undoubtedly enriched me with invaluable lessons. </p>
       </div>
       
       <div className="max-w mx-12 flex flex-col items-start gap-4 sm:mx-4 lg:mx-12">
@@ -30,9 +33,12 @@ export default function AboutPage() {
         </p>
       </div>
       <div className="max-w mb-auto mt-12 flex justify-center">
-        <button className="bg-black px-4 py-2 font-semibold text-white">
+        <Link href="/projects">
+        <Button className="bg-black px-4 py-2 font-semibold text-white">
+
           View My Portfolio
-        </button>
+        </Button>
+        </Link>
       </div>
     </section>
   );
