@@ -61,7 +61,7 @@ export function SiteFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/link-list" className=" transition hover:opacity-75">
+                  <Link href="/links" className=" transition hover:opacity-75">
                     Link List                                    
                   </Link>
                 </li>
