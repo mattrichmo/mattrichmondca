@@ -22,7 +22,7 @@ export default function linkListPage () {
   <div className=" flex-grid flex-col-5 xs:p-6 my-3 p-12 px-4">
 
 <Link href={siteConfig.links.instagram}>
-<Button className="duration-900 sticky mx-4 xs:mx-2 h-12 w-12 sm:h-8 sm:w-8 rounded-full bg-background text-foreground hover:-translate-y-3 hover:bg-secondary">
+<Button className="duration-900 xs:mx-2 sticky h-12 w-12 rounded-full bg-background text-foreground hover:-translate-y-3 hover:bg-secondary sm:h-8 sm:w-8">
     <div className="flex h-48 w-48 items-center justify-center">
     <Icons.instagram size={32} className="hover:text-primary" />
     </div>
