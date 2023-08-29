@@ -6,10 +6,10 @@ export function SiteFooter() {
   return (
     <footer className="border-t bg-background">
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className=" flex-col sm:flex-row sm:justify-between sm:items-start space-y-8 sm:space-y-0">
+        <div className=" flex-col space-y-8 sm:flex-row sm:items-start sm:justify-between sm:space-y-0">
           <div className=" items-center space-x-2 sm:space-x-4">
             <Icons.logo className="h-8 w-8" />
-            <span className="inline-block font-bold text-lg">{siteConfig.name}</span>
+            <span className="inline-block text-lg font-bold">{siteConfig.name}</span>
           
           <p className="mt-4 max-w-xs text-sm sm:text-base">
             &quot;Learn The Rules Like a Pro, So You Can Break Them Like an Artist.&quot; <br /> - Pablo Picasso or maybe Buddha

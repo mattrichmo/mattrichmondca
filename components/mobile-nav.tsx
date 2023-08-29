@@ -12,7 +12,7 @@ interface MobileNavProps {
 
 export function MobileNav({ items }: MobileNavProps) {
   return (
-    <div className="flex flex-col items-center justify-center h-full space-y-4">
+    <div className="flex h-full flex-col items-center justify-center space-y-4">
       <Link href="/" className="flex items-center space-x-2">
         <Icons.logo className="h-6 w-6" />
         <span className="inline-block font-bold">{siteConfig.name}</span>
