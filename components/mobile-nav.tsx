@@ -19,7 +19,7 @@ export function MobileNav({ items, onItemClick }: MobileNavProps) {
   };
 
   return (
-    <div className="flex h-full flex-col items-center mt-24 space-y-4">
+    <div className="mt-24 flex h-full flex-col items-center space-y-4">
       <Link 
       href="/" 
       className="mb-12 flex items-center space-x-2"
@@ -30,7 +30,7 @@ export function MobileNav({ items, onItemClick }: MobileNavProps) {
       </Link>
       <div className="mt-12 flex">
         {items?.length ? (
-          <nav className="flex flex-col items-center space-y-4 text-xl sm:text-xl text-foreground">
+          <nav className="flex flex-col items-center space-y-4 text-xl text-foreground sm:text-xl">
             {items?.map(
               (item, index) =>
                 item.href && (
