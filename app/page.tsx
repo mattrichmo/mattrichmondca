@@ -39,7 +39,7 @@ export default function IndexPage() {
           </h2>
 
         </div>
-        <div className="grid mt-24 mb-24 sm:mx-12">
+        <div className="flex max-w-[980px] flex-col items-start gap-4 mt-36">
           <h3 className="text-sm font-bold tracking-tighter sm:text-left">
             Found a typo or bug? <Link href="https://github.com/mattrichmo/mattrichmondca" className="text-xs font-semibold hover:underline"> submit a pull request. </Link> </h3>
   </div>
