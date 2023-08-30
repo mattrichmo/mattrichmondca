@@ -37,7 +37,13 @@ export default function IndexPage() {
               Grip Resume
             </Link>
           </h2>
+
         </div>
+        <div className="grid mt-24 mb-24 sm:mx-12">
+          <h3 className="text-sm font-bold tracking-tighter sm:text-left">
+            Found a typo or bug? <Link href="https://github.com/mattrichmo/mattrichmondca" className="text-xs font-semibold hover:underline"> submit a pull request. </Link> </h3>
+  </div>
+
       </div>
     </section>
   );
