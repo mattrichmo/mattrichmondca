@@ -56,7 +56,7 @@ export function SiteHeader() {
         }`}
       >
         {/* Mobile Menu Button */}
-        <div className="md:hidden z-50">
+        <div className="z-50 md:hidden">
           <Button
             onClick={toggleMobileMenu}
             className={`${buttonVariants({

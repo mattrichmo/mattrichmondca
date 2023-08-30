@@ -59,14 +59,14 @@ export default function linkListPage () {
   link={siteConfig.links.pexels} 
   title="Download My Photos For Free" 
   description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   
-  icon={<Icons.logo className="w-10"/>} 
+  icon={<Icons.camera className="w-8"/>} 
   linkText="pexels.com"
   />
     <CollapsibleLink 
   link={siteConfig.links.unsplash} 
   title="Download My Photos For Free" 
   description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   
-  icon={<Icons.logo className="w-12 pt-3"/>} 
+  icon={<Icons.camera className="w-8"/>} 
   linkText="unsplash.com"
   />
       <CollapsibleLink 
@@ -79,7 +79,7 @@ export default function linkListPage () {
       <CollapsibleLink 
   link={siteConfig.links.github} 
   title="WiseWriter V3 - Automated Content Generation" 
-  description="WiseWriter V3 was an interesting experiment in full-automation that includes audience research, topic generation, content generation in a 5D array, book cover generation and uploading to Sales Channels."   
+  description="WiseWriter V3 was an interesting experiment in full-automation of a product from pre-product, product launch to post-product that includes audience research, topic generation, content generation in a 5D array recursively to main contect and direction, book cover generation and uploading to Sales Channels."   
   icon={<Icons.gitHub className="w-8"/>} 
   linkText="github.com"
   />
@@ -87,7 +87,7 @@ export default function linkListPage () {
   link={"/about/film-cv"} 
   title="Grip Resume" 
   description="An ongoing list of the productions I have Gripped on."   
-  icon={<Icons.gitHub className="w-8"/>} 
+  icon={<Icons.grip className="w-8"/>} 
   linkText="mattrichmond.ca"
   />
 

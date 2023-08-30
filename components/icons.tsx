@@ -12,6 +12,8 @@ import {
   ChevronsLeftRightIcon,
   ArrowUpRightIcon,
   GithubIcon,
+  WrenchIcon,
+  CameraIcon,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -48,6 +50,8 @@ export const Icons = {
   chevronsClose: ChevronsUpDownIcon,
   chevronsOpen: ChevronsLeftRightIcon,
   arrowUpRight: ArrowUpRightIcon,
+  grip: WrenchIcon,
+  camera: CameraIcon,
 
 
   
