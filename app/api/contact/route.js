@@ -4,6 +4,7 @@ const { WritableStreamBuffer } = require('stream-buffers');
 const nodemailer = require('nodemailer');
 
 module.exports = async function POST(request) {
+  /* 
   try {
     const body = await request.json();
     console.log(body);
@@ -53,5 +54,5 @@ module.exports = async function POST(request) {
   } catch (error) {
     console.error('Error handling request:', error);
     return NextResponse.json({ error: 'An error occurred' }, { status: 500 });
-  }
+  } */
 };
