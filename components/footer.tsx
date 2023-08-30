@@ -15,7 +15,13 @@ export function SiteFooter() {
   <p className="mt-4  max-w-xs text-left text-sm sm:text-left sm:text-base">
     &quot;Learn The Rules Like a Pro, So You Can Break Them Like an Artist.&quot; <br /> - Pablo Picasso or maybe Buddha
   </p>
+  <p className="text-sm font-semibold tracking-tighter sm:text-left mt-2">
+            Found a typo or bug? 
+            <Link href="https://github.com/mattrichmo/mattrichmondca" target="_blank" className="text-xs font-semibold hover:underline ml-1">
+               submit a pull request or issue here. 
+            </Link> </p>
 </div>
+
           <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
             <div>
               <p className="font-medium">Projects</p>

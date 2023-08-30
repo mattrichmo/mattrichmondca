@@ -8,6 +8,7 @@ import { SiteHeader } from "@/components/site-header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteFooter } from "@/components/footer";
+import { Icons } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: {
@@ -20,9 +21,9 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/img/peace.svg",
+    shortcut: "/img/peace.svg",
+    apple: "/img/peace.svg",
   },
 };
 
