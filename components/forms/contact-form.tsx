@@ -45,22 +45,18 @@ export default function ContactForm() {
         toast({
           title: "Form submitted successfully!",
           description: `Response: ${JSON.stringify(responseData)}`,
-          status: "success",
         });
       } else {
         const errorData = await response.json();
         toast({
           title: "Error submitting form",
           description: `Error: ${JSON.stringify(errorData)}`,
-          status: "error",
         });
       }
     } catch (error) {
       console.error("An error occurred:", error);
       toast({
         title: "An error occurred",
-        description: error.message,
-        status: "error",
       });
     }
   }
