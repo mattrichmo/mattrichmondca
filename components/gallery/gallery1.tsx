@@ -56,7 +56,7 @@ export default function Gallery1({ imgFolderPath }: Gallery1Props) {
   React.useEffect(() => {
     async function fetchImages() {
       try {
-        const response = await fetch(`/api/folder-images?imgfolderpath=${encodeURIComponent(imgFolderPath)}`);
+        const response = await fetch(`https://mattrichmond.ca/api/folder-images?imgfolderpath=${encodeURIComponent(imgFolderPath)}`);
         const data: ImageData[] = await response.json();
         console.log(data); // Add this line after fetching data
 
