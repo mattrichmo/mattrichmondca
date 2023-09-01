@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-export default async function getImagesFolder(imgFolderPath) {
-  const images = [];
+export default async function getImagesFolder(imgFolderPath:string) {
+  /* const images = [];
 
   const imgFolder = path.join(process.cwd(), imgFolderPath);
   const files = fs.readdirSync(imgFolder);
@@ -33,5 +33,5 @@ function getImageDimensions(filePath) {
   return {
     width: image.width,
     height: image.height,
-  };
+  }; */
 }
