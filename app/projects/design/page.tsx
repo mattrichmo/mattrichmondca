@@ -7,41 +7,83 @@ const lora = Lora({
   display: 'swap',
   variable: '--font-lora',
 });
+import { useState, useEffect } from 'react';
 
 export default function DesignProjectPage () {
   return (
+    <div className={`flexbox flex-col items-center ${lora.variable}`}>
+    <div className={`flexbox flex-col ml-12 mt-24 mr-12 md:ml-12`}>
+      <h1 className="font-lora text-4xl font-semibold">Design Projects.</h1>
+      <h2 className="font-lora mt-2 text-2xl font-bold md:mr-24">
+        Previous design projects I have had a hand in.
+      </h2>
+      <p className="mt-12">List is being built in public, so you might see errors.</p>
+    </div>
 <section className={`flex h-screen flex-col gap-6 pb-8 pt-6 md:py-10 mx-12 ${lora.variable}`}>
-      <div className="flexbox w-full flex-col items-start gap-4 justify-center items genter mx:12">
+      <div className="flexbox w-full flex-col items-start gap-4 justify-center items genter mx:12 ">
       <CardProject 
   link={"https://zyrelife.com"} 
   title="Zyre Cannabis" 
   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
-  icon={<Icons.grip className="w-8"/>} 
+  icon={<Icons.logo className="w-10 mt-2"/>} 
   linkText="zyrelife.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-
+  imgFolderPath="/img/design/Zyre/"
+  />
+  <CardProject 
+  link={"https://auroramj.com"} 
+  title="Aurora Cannabis" 
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
+  icon={<Icons.logo className="w-10 mt-2"/>} 
+  linkText="auroramj.com"
+  client="Aurora Cannabis"
+  work="Created: Brand, website, packaging, brand launch."
+  imgFolderPath="/img/design/aurora/"
+  />
+    <CardProject 
+  link={"https://sanrafael71.com"} 
+  title="San Rafael '71" 
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
+  icon={<Icons.logo className="w-10 mt-2"/>} 
+  linkText="sanrafael71.com"
+  client="San Rafael '71"
+  work="Created: Brand, website, packaging, brand launch."
+  imgFolderPath="/img/design/sr71/"
+  />
+    <CardProject 
+  link={"https://altavie.ca"} 
+  title="Alta Vie" 
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
+  icon={<Icons.logo className="w-10 mt-2"/>} 
+  linkText="altavie.ca"
+  client="Alta Vie"
+  work="Created: Brand, website, packaging, brand launch."
+  imgFolderPath="/img/design/altavie/"
+  />
+      <CardProject 
+  link={"https://woodstockcannabis.com"} 
+  title="Woodstock Cannabis" 
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
+  icon={<Icons.logo className="w-10 mt-2"/>} 
+  linkText="zyrelife.com"
+  client="Zyre Cannabis"
+  work="Created: Brand, website, packaging, brand launch."
+  imgFolderPath="/img/design/zyre/"
   />
         <CardProject 
-  link={"https://zyrelife.com"} 
-  title="Zyre Cannabis" 
+  link={"https://whistlercannabisco.com"} 
+  title="Whistler Cannabis Co" 
   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
-  icon={<Icons.grip className="w-8"/>} 
-  linkText="zyrelife.com"
+  icon={<Icons.logo className="w-10 mt-2"/>} 
+  linkText="whistlercannabisco.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-
-  /> <CardProject 
-  link={"https://zyrelife.com"} 
-  title="Zyre Cannabis" 
-  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
-  icon={<Icons.grip className="w-8"/>} 
-  linkText="zyrelife.com"
-  client="Zyre Cannabis"
-  work="Created: Brand, website, packaging, brand launch."
-
+  imgFolderPath="/img/design/zyre/"
   />
+  
           </div>
           </section>
+          </div>
 );
   }

@@ -18,6 +18,7 @@ export function CardProject({
   linkText,
   client,
   work,
+  imgFolderPath,
 }: {
   title: string;
   link: string;
@@ -26,6 +27,7 @@ export function CardProject({
   linkText: string;
   client: string;
   work: string;
+  imgFolderPath: string;
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -80,8 +82,8 @@ export function CardProject({
                 <p className="mb-4">{description}</p>
               </div>
               <div className="mt-4 text-xs">
-             <Gallery1 />
-              </div>
+  <Gallery1 imgFolderPath={imgFolderPath} /> 
+</div>
               </CardContent>
             </CollapsibleContent>
           )}
