@@ -35,7 +35,7 @@ export default function Gallery1({ imgFolderPath }: Gallery1Props) {
 
   // Now, render the component with the updated state
   return (
-    <div className="mx-auto max-w-screen-xl px-8 mt-24">
+    <div className="mx-auto mt-24 max-w-screen-xl px-8">
       <PhotoAlbum
         layout="rows"
         photos={images.map((image) => ({

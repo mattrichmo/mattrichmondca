@@ -38,7 +38,7 @@ export function CardProject({
   return (
     <Card>
     <Collapsible>
-      <div className={`my-2 flex flex-col bg-secondary ${isExpanded ? 'h-auto py-32' : 'h-16'} items-center justify-center rounded-lg border-2 border-b-4 border-l-4 border-black px-4 shadow-xl transition-all duration-500 `}>
+      <div className={`my-2 flex flex-col bg-secondary ${isExpanded ? 'h-auto pb-32' : 'h-16'} items-center justify-center rounded-lg border-2 border-b-4 border-l-4 border-black px-4 shadow-xl transition-all duration-500 `}>
         <div className="w-full"> {/* Container for icon, title, link text, and trigger */}
           <div className="flex items-center justify-between">
           <Link href={link}>

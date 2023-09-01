@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import sizeOf from 'image-size';
 
-const getImageFiles = (imgFolderPath: string) => {
+const getImageFiles = (imgFolderPath: string): any[] => {
   const publicFolderPath = path.join(process.cwd(), 'public');
   const imgFolder = path.join(publicFolderPath, imgFolderPath);
   const files = fs.readdirSync(imgFolder);
