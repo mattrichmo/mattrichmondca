@@ -6,9 +6,9 @@ import sizeOf from 'image-size';
 // Define a function to get image files from a folder
 const getImageFiles = (imgFolderPath: string) => {
   // Get the path to the public folder
-  const publicFolderPath = path.join(process.cwd(), '/public');
+  const publicFolderPath = path.join('public');
   // Construct the path to the image folder using path.resolve
-  const imgFolder = path.resolve(publicFolderPath, imgFolderPath); // Use path.resolve
+  const imgFolder = path.resolve(process.cwd(),publicFolderPath, imgFolderPath); // Use path.resolve
   // Read the files in the image folder
   const files = fs.readdirSync(imgFolder);
   
