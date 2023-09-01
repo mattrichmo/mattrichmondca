@@ -5,8 +5,8 @@ import sizeOf from 'image-size';
 import { string } from 'zod';
 
 const getImageFiles = (imgFolderPath: string) => {
-  const publicFolderPath = path.join(process.cwd(), 'public');
-  const imgFolder = path.join(imgFolderPath);
+  const publicFolderPath = path.join(process.cwd(), './public/');
+  const imgFolder = path.join(publicFolderPath + imgFolderPath);
   const files = fs.readdirSync(imgFolder);
   
   console.log('Step 1: Reading files from folder...');
