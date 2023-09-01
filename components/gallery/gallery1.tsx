@@ -23,6 +23,8 @@ export default function Gallery1({ imgFolderPath }: Gallery1Props) {
       try {
         const response = await fetch(`/api/folder-images?imgfolderpath=${encodeURIComponent(imgFolderPath)}`);
         const data: ImageData[] = await response.json();
+        console.log(data); // Add this line after fetching data
+
 
         setImages(data); // Update the state after fetching data
       } catch (error) {
