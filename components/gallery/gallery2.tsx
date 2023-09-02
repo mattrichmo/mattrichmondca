@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from 'react';
 import Image, { ImageProps } from 'next/image';
 import { getImages } from '@/utils/get-image';
@@ -7,6 +8,7 @@ const { grid, card } = styles;
 
 export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; onClick?: ImageProps["onClick"] }) => {
     const [images, setImages] = useState<string[] | undefined>([]);
+    
   
     useEffect(() => {
       const fetchImages = async () => {
@@ -25,21 +27,21 @@ export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; on
   return (
     <>
       <div className={grid}>
-        {images &&
-          images.map((el: string) => (
-            <Image
-              className={card}
-              height={200}
-                width={200}
-              style={{
-                objectFit: 'contain',
-              }}
-              alt={'alt'}
-              src={`/${imgFolderPath}${el}`}
-                key={el}
-              onClick={onClick ? onClick : undefined}
-            />
-          ))}
+      {images &&
+  images.map((el: string) => (
+    <Image
+      className={card}
+      height={200}
+      width={200}
+      style={{
+        objectFit: 'cover',
+      }}
+      alt={`${el}`}
+      src={`${imgFolderPath}${el}`}
+      key={el}
+      onClick={onClick ? onClick : undefined}
+    />
+  ))}
       </div>
     </>
   );

@@ -1,3 +1,4 @@
+"use client"
 import { Lora } from 'next/font/google';
 import { Icons } from '@/components/icons';
 import { CardProject } from '@/components/cards/card-test';
@@ -30,7 +31,7 @@ export default function DesignProjectPage () {
   linkText="zyrelife.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="img/design/zyre/"
+  imgFolderPath="/img/design/zyre/"
   />
   <CardProject 
   link={"https://auroramj.com"} 
@@ -40,7 +41,7 @@ export default function DesignProjectPage () {
   linkText="auroramj.com"
   client="Aurora Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="img/design/aurora/"
+  imgFolderPath="/img/design/aurora/"
   />
     <CardProject 
   link={"https://sanrafael71.com"} 

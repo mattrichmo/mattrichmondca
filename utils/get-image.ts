@@ -1,21 +1,20 @@
-'use server'
-import { promises as fs } from 'fs'
-import path from 'path'
+
+"use server"
+import { promises as fs } from 'fs';
+import path from 'path';
+import { GetStaticPropsContext } from 'next';
 
 type ImageArray = string[] | undefined;
 
-/**
- * Get an array of image filenames from a directory.
- * 
- * @returns {Promise<ImageArray>}
- */
 export const getImages = async (imgFolderPath: string): Promise<ImageArray> => {
-        try {
+    try {
         const imageDirectory = path.join(process.cwd(), '/public', imgFolderPath);
-        const imageFilenames: ImageArray = await fs.readdir(imageDirectory)
+        const imageFilenames: ImageArray = await fs.readdir(imageDirectory);
 
-        return imageFilenames
+        return imageFilenames;
     } catch (error: any) {
-        console.error(error)
+        console.error(error);
+        return undefined; // You should return a value here, even if it's undefined
     }
 }
+
