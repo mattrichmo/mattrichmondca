@@ -40,7 +40,7 @@ const getImageFiles = (imgFolderPath: string) => {
 export async function GET(req: NextRequest) {
   try {
     const { method } = req;
-    const imgFolderPath = req.nextUrl.searchParams.get('imgfolderpath');
+    const imgFolderPath = req.nextUrl.searchParams.get('imgFolderPath');
     
     if (method === 'GET' && imgFolderPath) {
       // Log a message indicating the step
