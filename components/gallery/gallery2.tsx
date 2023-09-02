@@ -35,7 +35,7 @@ export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; on
                 objectFit: 'contain',
               }}
               alt={'alt'}
-              src={`${imgFolderPath}${el}`}
+              src={`/${imgFolderPath}${el}`}
                 key={el}
               onClick={onClick ? onClick : undefined}
             />
