@@ -20,7 +20,6 @@ export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; on
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
-
         // Parse the JSON response
         const data = await response.json();
         setImages(data);

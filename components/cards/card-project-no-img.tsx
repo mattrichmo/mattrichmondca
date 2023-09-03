@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import {Card, CardTitle, CardContent, CardFooter, CardHeader} from '@/components/ui/card';
-import Gallery1 from '@/components/gallery/gallery1';
 
 export function CardProject({
   title,
