@@ -82,7 +82,7 @@ export default function DesignProjectPage () {
   imgFolderPath="/img/design/whistlercannabis/"
   />
     <CardProject 
-  link={"https://blushcannabis.com (dead)"} 
+  link={"https://blushcannabis.com"} 
   title="Blush Cannabis" 
   description=" "   
   icon={<Icons.logo className="mt-2 w-10"/>} 
