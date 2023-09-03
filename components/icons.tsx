@@ -14,6 +14,7 @@ import {
   GithubIcon,
   WrenchIcon,
   CameraIcon,
+  VideoIcon,
   type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -52,6 +53,7 @@ export const Icons = {
   arrowUpRight: ArrowUpRightIcon,
   grip: WrenchIcon,
   camera: CameraIcon,
+  video: VideoIcon,
 
 
   

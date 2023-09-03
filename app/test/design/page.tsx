@@ -83,6 +83,16 @@ export default function DesignProjectPage () {
   work="Created: Brand, website, packaging, brand launch."
   imgFolderPath="/img/design/whistlercannabis/"
   />
+  <CardProject 
+  link={"https://blushcannabis.com (dead)"} 
+  title="Blush Cannabis" 
+  description=" "   
+  icon={<Icons.logo className="mt-2 w-10"/>} 
+  linkText="zyrelife.com"
+  client="Blush Cannabis"
+  work="Created: Brand, website, packaging, brand launch."
+  imgFolderPath="/img/design/blush/ "
+  />
   
           </div>
           </section>

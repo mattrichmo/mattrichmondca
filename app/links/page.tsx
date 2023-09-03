@@ -87,7 +87,14 @@ export default function linkListPage () {
   link={"/about/film-cv"} 
   title="Grip Resume" 
   description="An ongoing list of the productions I have Gripped on."   
-  icon={<Icons.grip className="w-8"/>} 
+  icon={<div className="flex"><Icons.grip className="w-8"/> <Icons.video className="w-8"/></div>} 
+  linkText="mattrichmond.ca"
+  />
+  <CollapsibleLink 
+  link={siteConfig.links.home} 
+  title="Homepage" 
+  description="My little spot on the net. Full of errors and bugs, and changes more than I change my socks, but I use this as a testing ground for new technologies and ideas."   
+  icon={<Icons.logo className="mt-2 w-8"/>} 
   linkText="mattrichmond.ca"
   />
 

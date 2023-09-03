@@ -4,35 +4,46 @@ import styles from '@/components/gallery/styles.module.css';
 
 const { grid, card } = styles;
 
-export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; onClick?: ImageProps["onClick"] }) => {
-  const [images, setImages] = useState<string[] | undefined>([]);
+export const getStaticProps = async () => {
+  try {
+    // Define the imgFolderPath here
+    const imgFolderPath = '/your/image/folder/path'; // Change this to your actual folder path
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        // Create the URL with imgFolderPath as a query parameter
-        const apiUrl = `/api/test?imgFolderPath=${imgFolderPath}`;
-        // Make a GET request to the API
-        const response = await fetch(apiUrl);
-        console.log('Response',response);
+    // Create the URL with imgFolderPath as a query parameter
+    const apiUrl = `/api/test?imgFolderPath=${imgFolderPath}`;
 
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
+    // Make a GET request to the API
+    const response = await fetch(apiUrl);
 
-        // Parse the JSON response
-        const data = await response.json();
-        setImages(data);
-        console.log('Data',data);
+    if (!response.ok) {
+      throw new Error('Failed to fetch data');
+    }
 
-        // Extract filenames from the JSON ar
-      } catch (error) {
-        console.error(error);
-      }
+    // Parse the JSON response
+    const data = await response.json();
+
+    // Return the data as props
+    return {
+      props: {
+        data,
+      },
     };
+  } catch (error) {
+    console.error(error);
+    // Handle errors appropriately
+  }
+};
 
-    fetchImages();
-  }, [imgFolderPath]);
+export const Gallery2 = ({
+  imgFolderPath,
+  onClick,
+  data, // Access the data prop you fetched
+}: {
+  imgFolderPath: string;
+  onClick?: ImageProps['onClick'];
+  data: string[]; // Assuming data is an array of image filenames
+}) => {
+  const [images, setImages] = useState<string[] | undefined>(data); // Set initial state with data
 
   return (
     <>
@@ -43,9 +54,7 @@ export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; on
               className={card}
               height={0}
               width={300}
-              style={{
-                objectFit: 'contain',
-              }}
+        
               alt={filename}
               src={`${imgFolderPath}/${filename}`}
               key={filename}

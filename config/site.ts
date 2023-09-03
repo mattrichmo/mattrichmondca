@@ -18,6 +18,7 @@ export const siteConfig = {
     }
   ],
   links: {
+    home: "/",
     twitter: "https://twitter.com/#",
     github: "https://github.com/mattrichmo",
     docs: "https://#.com",
