@@ -86,7 +86,7 @@ export default function DesignProjectPage () {
   title="Blush Cannabis" 
   description=" "   
   icon={<Icons.logo className="mt-2 w-10"/>} 
-  linkText="zyrelife.com"
+  linkText="blushcannabis.com(dead)"
   client="Blush Cannabis"
   work="Created: Brand, website, packaging, brand launch."
   imgFolderPath="/img/design/blush/ "

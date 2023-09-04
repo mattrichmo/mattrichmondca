@@ -5,6 +5,9 @@ Currently, it's live at https://mattrichmond.ca
 
 
 ## TO-DO 
+- get api workiong for dynamic image galleries (client side error)
+- download as pdf on grip resume
+
 - Add Photo Galleries of My Photography
 - Add Projects Page
     - Code Projects
