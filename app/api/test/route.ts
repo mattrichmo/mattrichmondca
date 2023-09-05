@@ -23,12 +23,6 @@ export const getImages = async (): Promise<ImageArray> => {
         throw error; // Rethrow the error to propagate it
     }
 };
-
-/**
- * Handles a GET request by calling the getImages function.
- * @param {NextRequest} request The incoming GET request.
- * @returns {NextResponse} A JSON response.
- */
 export async function GET(request: NextRequest): Promise<NextResponse> {
     try {
         // Call the getImages function to retrieve image file names
