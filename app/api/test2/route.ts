@@ -4,10 +4,10 @@ import { NextResponse, NextRequest } from 'next/server';
 
 // Define a type for an array of image file names
 type ImageArray = string[] | undefined;
-const getImages = async (projectName: string): Promise<ImageArray> => {
+const getImages = async (): Promise<ImageArray> => {
     try {
         // Grabs the path to the '/public/' directory
-        const imageDirectory = path.join(process.cwd(), '/public/img/design/' + projectName + '/');
+        const imageDirectory = path.join(process.cwd(), '/public/');
 
         // Reads the content of the '/public/' directory and returns an array of strings
         const imageFilenames: ImageArray = await fs.readdir(imageDirectory);
@@ -18,19 +18,10 @@ const getImages = async (projectName: string): Promise<ImageArray> => {
         throw error; // Rethrow the error to propagate it
     }
 };
-
 export async function GET(request: NextRequest): Promise<NextResponse> {
     try {
-        // Extract the projectname string from the URL request
-        const queryParams = new URLSearchParams(request.url.split('?')[1]);
-        const projectName = queryParams.get('projectName');
-
-        if (!projectName) {
-            throw new Error('Missing projectName parameter');
-        }
-
         // Call the getImages function to retrieve image file names
-        const imageFilenames = await getImages(projectName);
+        const imageFilenames = await getImages();
 
         // Return a JSON response with the image file names
         return new NextResponse(JSON.stringify(imageFilenames), {
