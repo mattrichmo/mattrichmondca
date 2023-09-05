@@ -1,39 +1,51 @@
-"use server"
-import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from 'fs';
 import path from 'path';
+import { NextResponse, NextRequest } from 'next/server';
 
+// Define a type for an array of image file names
 type ImageArray = string[] | undefined;
 
-const getImages = async (imgFolderPath: string): Promise<ImageArray> => {
+/**
+ * Retrieves a list of image file names from the '/public/' directory.
+ * @returns {Promise<ImageArray>} A promise that resolves to an array of image file names.
+ */
+export const getImages = async (): Promise<ImageArray> => {
     try {
-        const imageDirectory = path.join(process.cwd(), imgFolderPath);
-        console.log(imageDirectory);
-        const images: ImageArray = await fs.readdir(imageDirectory);
-        console.log(images);
+        // Grabs the path to the '/public/' directory
+        const imageDirectory = path.join(process.cwd(), '/public/');
 
-        return images;
+        // Reads the content of the '/public/' directory and returns an array of strings
+        const imageFilenames: ImageArray = await fs.readdir(imageDirectory);
+
+        return imageFilenames;
     } catch (error: any) {
         console.error(error);
-        return undefined;
+        throw error; // Rethrow the error to propagate it
     }
-}
+};
 
-export async function GET(req: NextRequest) {
+/**
+ * Handles a GET request by calling the getImages function.
+ * @param {NextRequest} request The incoming GET request.
+ * @returns {NextResponse} A JSON response.
+ */
+export async function GET(request: NextRequest): Promise<NextResponse> {
     try {
-        const { method } = req;
-        const imgFolderPath = req.nextUrl.searchParams.get('imgFolderPath');
-        
-        if (method === 'GET' && imgFolderPath) {
-            // Corrected: Add await here
-            const images = await getImages(imgFolderPath);
-            console.log('Step 4: Sending JSON response...');
-            return NextResponse.json(images);
-        } else {
-            return NextResponse.json({ error: 'Method Not Allowed' });
-        }
-    } catch (error) {
+        // Call the getImages function to retrieve image file names
+        const imageFilenames = await getImages();
+
+        // Return a JSON response with the image file names
+        return new NextResponse(JSON.stringify(imageFilenames), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' },
+        });
+    } catch (error: any) {
         console.error(error);
-        return NextResponse.json({ error: 'An error occurred' });
+
+        // Return an error response
+        return new NextResponse(JSON.stringify({ error: 'An error occurred.' }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' },
+        });
     }
 }
