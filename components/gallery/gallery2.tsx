@@ -12,7 +12,7 @@ export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; on
     const fetchImages = async () => {
       try {
         // Create the URL with imgFolderPath as a query parameter
-        const apiUrl = `/api/test?imgFolderPath=${imgFolderPath}`;
+        const apiUrl = `/api/test?projectName=${imgFolderPath}`;
         // Make a GET request to the API
         const response = await fetch(apiUrl);
         console.log('Response',response);
