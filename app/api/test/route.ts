@@ -6,7 +6,7 @@ type ImageArray = string[] | undefined;
 
 const getImages = async (imgFolderPath: string): Promise<ImageArray> => {
     try {
-        const imageDirectory = path.join(process.cwd(), '/public', imgFolderPath);
+        const imageDirectory = path.join(process.cwd(), 'public', imgFolderPath);
         console.log(imageDirectory);
         const images: ImageArray = await fs.readdir(imageDirectory);
         console.log(images);
