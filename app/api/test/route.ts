@@ -4,11 +4,6 @@ import { NextResponse, NextRequest } from 'next/server';
 
 // Define a type for an array of image file names
 type ImageArray = string[] | undefined;
-
-/**
- * Retrieves a list of image file names from the '/public/' directory.
- * @returns {Promise<ImageArray>} A promise that resolves to an array of image file names.
- */
 export const getImages = async (): Promise<ImageArray> => {
     try {
         // Grabs the path to the '/public/' directory
