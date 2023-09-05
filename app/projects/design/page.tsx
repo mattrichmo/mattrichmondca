@@ -1,13 +1,12 @@
 import { Lora } from 'next/font/google';
 import { Icons } from '@/components/icons';
-import { CardProject } from '@/components/cards/card-project-no-img';
-import { Card } from '@/components/ui/card';
+import { CardProject } from '@/components/cards/card-test';
+
 const lora = Lora({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-lora',
 });
-import { useState, useEffect } from 'react';
 
 export default function DesignProjectPage () {
   return (
@@ -24,27 +23,27 @@ export default function DesignProjectPage () {
       <CardProject 
   link={"https://zyrelife.com"} 
   title="Zyre Cannabis" 
-  description="Zyre Cannabis was a bubbly, poppy, modern brand that was to speak to a demographic who was fast-paced and making it work in this modern world.."   
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
   icon={<Icons.logo className="mt-2 w-10"/>} 
   linkText="zyrelife.com"
   client="Zyre Cannabis"
-  work="Created: Brand, website, Packaging, Brand Launch, Brand Guidelines. "
-  imgFolderPath="/img/design/zyre/"
+  work="Created: Brand, website, packaging, brand launch."
+  imgFolderPath="/design/zyre"
   />
   <CardProject 
   link={"https://auroramj.com"} 
   title="Aurora Cannabis" 
-  description="Aurora Cannabis, was one of the largest cannabis companies in the world at one point and I am proud to have had a m,aor impact on the recreational growth of the company.Legalization was such an exciting time as we were in uncharted territory. So building the brand but also the processes behind the brand was a challenge that I was excited to take on."   
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
   icon={<Icons.logo className="mt-2 w-10"/>} 
   linkText="auroramj.com"
   client="Aurora Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/aurora/"
+  imgFolderPath="/design/aurora"
   />
     <CardProject 
   link={"https://sanrafael71.com"} 
   title="San Rafael '71" 
-  description="San Rafael '71 was a sub=brand of Aurora which we built out to resonate with more traditional cannmabis consumers."   
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
   icon={<Icons.logo className="mt-2 w-10"/>} 
   linkText="sanrafael71.com"
   client="San Rafael '71"
@@ -54,7 +53,7 @@ export default function DesignProjectPage () {
     <CardProject 
   link={"https://altavie.ca"} 
   title="Alta Vie" 
-  description="Alta Vie was a brand that was built to resonate with the more wellness focused cannabis consumer."   
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
   icon={<Icons.logo className="mt-2 w-10"/>} 
   linkText="altavie.ca"
   client="Alta Vie"
@@ -64,29 +63,29 @@ export default function DesignProjectPage () {
       <CardProject 
   link={"https://woodstockcannabis.com"} 
   title="Woodstock Cannabis" 
-  description="Woodstock Cannabis was a brand that was built to resonate with the more mature cannabis consumer. Sadly, it only existed to keep the trademark and the brand name alive and the brand never got the love it should have gotten."   
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
   icon={<Icons.logo className="mt-2 w-10"/>} 
   linkText="zyrelife.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/woodstockcannabis/"
+  imgFolderPath="img/design/woodstockcannabis/"
   />
         <CardProject 
   link={"https://whistlercannabisco.com"} 
   title="Whistler Cannabis Co" 
-  description="Whistler Cannabis Co is a high-end, premium cannabis brand that was built to resonate with the more discerning cannabis consumer."   
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
   icon={<Icons.logo className="mt-2 w-10"/>} 
   linkText="whistlercannabisco.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
   imgFolderPath="/img/design/whistlercannabis/"
   />
-    <CardProject 
+  <CardProject 
   link={"https://blushcannabis.com"} 
   title="Blush Cannabis" 
   description=" "   
   icon={<Icons.logo className="mt-2 w-10"/>} 
-  linkText="blushcannabis.com(dead)"
+  linkText="blushcannabis.com (dead)"
   client="Blush Cannabis"
   work="Created: Brand, website, packaging, brand launch."
   imgFolderPath="/img/design/blush/ "
