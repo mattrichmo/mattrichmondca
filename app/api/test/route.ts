@@ -4,7 +4,7 @@ import { NextResponse, NextRequest } from 'next/server';
 
 // Define a type for an array of image file names
 type ImageArray = string[] | undefined;
-export const getImages = async (): Promise<ImageArray> => {
+const getImages = async (): Promise<ImageArray> => {
     try {
         // Grabs the path to the '/public/' directory
         const imageDirectory = path.join(process.cwd(), '/public/');
