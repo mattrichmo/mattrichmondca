@@ -1,3 +1,6 @@
+"use client"
+
+
 
 import { useState } from "react";
 import Link from 'next/link';
@@ -28,7 +31,9 @@ export function CardProject({
   client: string;
   work: string;
   imgFolderPath: string;
-}) {
+})
+
+{
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpansion = () => {
