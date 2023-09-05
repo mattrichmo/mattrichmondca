@@ -1,15 +1,12 @@
-"use client"
 import { Lora } from 'next/font/google';
 import { Icons } from '@/components/icons';
 import { CardProject } from '@/components/cards/card-test';
-import { Card } from '@/components/ui/card';
 
 const lora = Lora({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-lora',
 });
-import { useState, useEffect } from 'react';
 
 export default function DesignProjectPage () {
   return (
@@ -84,11 +81,11 @@ export default function DesignProjectPage () {
   imgFolderPath="/img/design/whistlercannabis/"
   />
   <CardProject 
-  link={"https://blushcannabis.com (dead)"} 
+  link={"https://blushcannabis.com"} 
   title="Blush Cannabis" 
   description=" "   
   icon={<Icons.logo className="mt-2 w-10"/>} 
-  linkText="zyrelife.com"
+  linkText="blushcannabis.com (dead)"
   client="Blush Cannabis"
   work="Created: Brand, website, packaging, brand launch."
   imgFolderPath="/img/design/blush/ "
