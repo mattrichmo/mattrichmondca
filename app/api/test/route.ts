@@ -1,3 +1,4 @@
+"use server"
 import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -6,7 +7,7 @@ type ImageArray = string[] | undefined;
 
 const getImages = async (imgFolderPath: string): Promise<ImageArray> => {
     try {
-        const imageDirectory = path.join(process.cwd(), 'public', imgFolderPath);
+        const imageDirectory = path.join(process.cwd(), imgFolderPath);
         console.log(imageDirectory);
         const images: ImageArray = await fs.readdir(imageDirectory);
         console.log(images);
