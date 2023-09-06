@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Image, { ImageProps } from 'next/image';
 import styles from '@/components/gallery/styles.module.css';
 import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+
 
 const { grid, card } = styles;
 
