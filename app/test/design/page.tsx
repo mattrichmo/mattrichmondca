@@ -23,7 +23,7 @@ export default function DesignProjectPage () {
       <CardProject 
   link={"https://zyrelife.com"} 
   title="Zyre Cannabis" 
-  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl. Sed euismod, diam quis aliquam ultricies, nisl nunc aliquet nunc, vitae aliquam nisl nunc vitae nisl."   
+  description="Zyre Cannabis was created to appeal to a bubblier, more modern consumer. "   
   icon={<Icons.logo className="mt-2 w-10"/>} 
   linkText="zyrelife.com"
   client="Zyre Cannabis"
@@ -48,7 +48,7 @@ export default function DesignProjectPage () {
   linkText="sanrafael71.com"
   client="San Rafael '71"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/sr71/"
+  imgFolderPath="/design/sr71/"
   />
     <CardProject 
   link={"https://altavie.ca"} 
@@ -58,7 +58,7 @@ export default function DesignProjectPage () {
   linkText="altavie.ca"
   client="Alta Vie"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/altavie/"
+  imgFolderPath="/design/altavie/"
   />
       <CardProject 
   link={"https://woodstockcannabis.com"} 
@@ -78,7 +78,7 @@ export default function DesignProjectPage () {
   linkText="whistlercannabisco.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/whistlercannabis/"
+  imgFolderPath="/design/whistlercannabis/"
   />
   <CardProject 
   link={"https://blushcannabis.com"} 
@@ -88,7 +88,7 @@ export default function DesignProjectPage () {
   linkText="blushcannabis.com (dead)"
   client="Blush Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/blush/ "
+  imgFolderPath="/design/blush/ "
   />
   
           </div>
