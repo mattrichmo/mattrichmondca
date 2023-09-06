@@ -28,7 +28,7 @@ export default function DesignProjectPage () {
   linkText="zyrelife.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/design/zyre"
+  imgFolderPath="/design/zyre/"
   />
   <CardProject 
   link={"https://auroramj.com"} 
@@ -38,7 +38,7 @@ export default function DesignProjectPage () {
   linkText="auroramj.com"
   client="Aurora Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/design/aurora"
+  imgFolderPath="/design/aurora/"
   />
     <CardProject 
   link={"https://sanrafael71.com"} 

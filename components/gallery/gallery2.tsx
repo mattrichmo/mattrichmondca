@@ -1,12 +1,13 @@
-"use client"
 import React, { useEffect, useState } from 'react';
 import Image, { ImageProps } from 'next/image';
 import styles from '@/components/gallery/styles.module.css';
+import Lightbox from 'yet-another-react-lightbox';
 
 const { grid, card } = styles;
 
 export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; onClick?: ImageProps["onClick"] }) => {
   const [images, setImages] = useState<string[] | undefined>([]);
+  const [lightboxIndex, setLightboxIndex] = useState<number>(-1);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -15,7 +16,6 @@ export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; on
         const apiUrl = `/api/test?projectName=${imgFolderPath}`;
         // Make a GET request to the API
         const response = await fetch(apiUrl);
-        console.log('Response',response);
 
         if (!response.ok) {
           throw new Error('Failed to fetch data');
@@ -23,9 +23,7 @@ export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; on
         // Parse the JSON response
         const data = await response.json();
         setImages(data);
-        console.log('Data',data);
 
-        // Extract filenames from the JSON ar
       } catch (error) {
         console.error(error);
       }
@@ -37,22 +35,40 @@ export const Gallery2 = ({ imgFolderPath, onClick }: { imgFolderPath: string; on
   return (
     <>
       <div className={grid}>
-        {images &&
-          images.map((filename: string) => (
-            <Image
+        {images && images.length > 0 &&
+          images.map((image: string, index: number) => (
+            <div
               className={card}
-              height={0}
-              width={640}
-              style={{
-                objectFit: 'contain',
-              }}
-              alt={filename}
-              src={`/img`+`${imgFolderPath}/${filename}`}
-              key={filename}
-              onClick={onClick ? onClick : undefined}
-            />
+              key={image}
+              onClick={() => setLightboxIndex(index)} // Open lightbox on click
+            >
+              <Image
+                height={0}
+                width={640}
+                style={{
+                  objectFit: 'contain',
+                }}
+                alt={image}
+                src={`/img${imgFolderPath}${image}`}
+              />
+            </div>
           ))}
       </div>
+
+      {/* Lightbox Component */}
+      {images && images.length > 0 && (
+        <Lightbox
+          index={lightboxIndex}
+          slides={images.map((image) => ({
+            src: `/img${imgFolderPath}${image}`,
+            alt: image,
+            width: 640,
+            height: 0, // Set the height to 0 if you want to maintain the aspect ratio
+          }))}
+          open={lightboxIndex >= 0}
+          close={() => setLightboxIndex(-1)}
+        />
+      )}
     </>
   );
 };
