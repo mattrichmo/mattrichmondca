@@ -1,5 +1,7 @@
 "use client"
 
+
+
 import { useState } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -8,7 +10,8 @@ import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import {Card, CardTitle, CardContent, CardFooter, CardHeader} from '@/components/ui/card';
-import Gallery1 from '@/components/gallery/gallery1';
+import {Gallery2} from '@/components/gallery/gallery2';
+
 
 export function CardProject({
   title,
@@ -28,7 +31,9 @@ export function CardProject({
   client: string;
   work: string;
   imgFolderPath: string;
-}) {
+})
+
+{
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpansion = () => {
@@ -41,7 +46,9 @@ export function CardProject({
       <div className={`my-2 flex flex-col bg-secondary ${isExpanded ? 'h-auto pb-32' : 'h-16'} items-center justify-center rounded-lg border-2 border-b-4 border-l-4 border-black px-4 shadow-xl transition-all duration-500 `}>
         <div className="w-full"> {/* Container for icon, title, link text, and trigger */}
           <div className="flex items-center justify-between">
-          <Link href={link}>
+          <Link href={link}               
+          target="_blank"
+          rel="noreferrer">
    
 
 
@@ -54,7 +61,9 @@ export function CardProject({
             </Link>
 
             <div className="flex items-center text-xs font-light text-muted-foreground"> {/* Container for link text and trigger */}
-              <Link href={link} className="inline-flex items-center hover:text-primary">
+              <Link href={link} className="inline-flex items-center hover:text-primary"
+                        target="_blank"
+                        rel="noreferrer">
                 {linkText} 
                 <svg className=" ml-2 flex h-3 w-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
@@ -79,11 +88,12 @@ export function CardProject({
                 <h2 className="mb-4">Work: {work}</h2>
               </div>
               <div className="mt-4 text-xs"> 
-                <p className="mb-4">{description}</p>
+                <p className="mb-4">{description}</p>   
               </div>
               <div className="mt-4 text-xs">
-  <Gallery1 imgFolderPath={imgFolderPath} /> 
-</div>
+            <Gallery2 
+            imgFolderPath={imgFolderPath}  /> 
+            </div>
               </CardContent>
             </CollapsibleContent>
           )}

@@ -1,6 +1,6 @@
 import { Lora } from 'next/font/google';
 import { Icons } from '@/components/icons';
-import { CardProject } from '@/components/cards/card-test';
+import { CardProject } from '@/components/cards/card-project';
 
 const lora = Lora({
   subsets: ['latin'],

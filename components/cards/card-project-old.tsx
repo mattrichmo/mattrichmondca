@@ -1,7 +1,5 @@
 "use client"
 
-
-
 import { useState } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,8 +8,7 @@ import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
 import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
 import {Card, CardTitle, CardContent, CardFooter, CardHeader} from '@/components/ui/card';
-import {Gallery2} from '@/components/gallery/gallery2';
-
+import Gallery1 from '@/components/gallery/gallery1';
 
 export function CardProject({
   title,
@@ -31,9 +28,7 @@ export function CardProject({
   client: string;
   work: string;
   imgFolderPath: string;
-})
-
-{
+}) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpansion = () => {
@@ -84,12 +79,11 @@ export function CardProject({
                 <h2 className="mb-4">Work: {work}</h2>
               </div>
               <div className="mt-4 text-xs"> 
-                <p className="mb-4">{description}</p>   
+                <p className="mb-4">{description}</p>
               </div>
               <div className="mt-4 text-xs">
-            <Gallery2 
-            imgFolderPath={imgFolderPath}  /> 
-            </div>
+  <Gallery1 imgFolderPath={imgFolderPath} /> 
+</div>
               </CardContent>
             </CollapsibleContent>
           )}
