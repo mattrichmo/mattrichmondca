@@ -48,7 +48,7 @@ export default function DesignProjectPage () {
   linkText="sanrafael71.com"
   client="San Rafael '71"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/sr71/"
+  imgFolderPath="/design/sr71/"
   />
     <CardProject 
   link={"https://altavie.ca"} 
@@ -58,7 +58,7 @@ export default function DesignProjectPage () {
   linkText="altavie.ca"
   client="Alta Vie"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/altavie/"
+  imgFolderPath="/design/altavie/"
   />
       <CardProject 
   link={"https://woodstockcannabis.com"} 
@@ -68,7 +68,7 @@ export default function DesignProjectPage () {
   linkText="zyrelife.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="img/design/woodstockcannabis/"
+  imgFolderPath="/design/woodstockcannabis/"
   />
         <CardProject 
   link={"https://whistlercannabisco.com"} 
@@ -78,7 +78,7 @@ export default function DesignProjectPage () {
   linkText="whistlercannabisco.com"
   client="Zyre Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/whistlercannabis/"
+  imgFolderPath="/design/whistlercannabis/"
   />
   <CardProject 
   link={"https://blushcannabis.com"} 
@@ -88,7 +88,7 @@ export default function DesignProjectPage () {
   linkText="blushcannabis.com (dead)"
   client="Blush Cannabis"
   work="Created: Brand, website, packaging, brand launch."
-  imgFolderPath="/img/design/blush/ "
+  imgFolderPath="/design/blush/ "
   />
   
           </div>
