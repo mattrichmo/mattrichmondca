@@ -50,19 +50,18 @@
       #7c8c8c 90%,
       #0a4a0f 100%
     );
-    animation: gradient 10s ease infinite;
+    animation: gradient 5s linear infinite; /* Adjust the animation duration to make it faster */
   
     @keyframes gradient {
       0% {
         background-position: 0% 50%;
       }
-      50% {
+      100% {
         background-position: 100% 50%;
       }
-      100% {
-        background-position: 0% 50%;
-      }
     }
+  
+  
 
     --foreground: 213 31% 91%;
 

@@ -34,7 +34,7 @@ const lora = Lora({
 
 export default function CodeProjectPage() {
   const { theme } = useTheme()
-  const opacity = theme === "dark" ? 0.2 : 0.6
+  const opacity = theme === "dark" ? 0.1 : 0.5
 
 
   const blendMode = theme === "dark" ? "darken" : "lighten"
@@ -49,8 +49,7 @@ export default function CodeProjectPage() {
   ></div>
   <div className="flex flex-col items-start bg-white bg-opacity-80 rounded-lg shadow-md p-8 mt-24 mx-12 md:ml-12 relative" style={{ backgroundImage: 'url("/bg/bg1.jpg")', backgroundSize: 'cover', backgroundBlendMode: 'lighten', backgroundColor: `rgba(255, 255, 255, ${opacity})` }}>
             <h1 className="font-lora text-4xl font-semibold mb-2">Code Projects.</h1>
-    <h2 className="font-lora text-2xl font-bold md:mr-24">Some Hobby Projects</h2>
-    <p className="mt-8">I open-source almost anything as I am just having a great time coding. Let's make magic.</p>
+            <h2 className="font-lora text-2xl font-bold md:mr-24">Some Hobby Projects. View my <Link href="github.com/mattrichmo" className="text-accent hover:underline">Github</Link> for my most up to date project list.</h2>    <p className="mt-8">I open-source almost anything as I am just having a great time coding. Let's make magic.</p>
   </div>
 </div>
 
