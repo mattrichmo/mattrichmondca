@@ -1,3 +1,6 @@
+"use client"
+import * as React from "react"
+import { useTheme } from "next-themes"
 import {
   Card,
   CardContent,
@@ -16,6 +19,8 @@ import {
 import Link from "next/link";
 import { SiteConfig, siteConfig } from "@/config/site";
 import { Icons } from "@/components/icons";
+import Image from 'next/image';
+
 
 import { CodeProject } from "@/components/cards/codeproject";
 
@@ -28,15 +33,27 @@ const lora = Lora({
 });
 
 export default function CodeProjectPage() {
+  const { theme } = useTheme()
+  const opacity = theme === "dark" ? 0.2 : 0.6
+
+
+  const blendMode = theme === "dark" ? "darken" : "lighten"
+
   return (
     <div className={`flexbox flex-col items-center ${lora.variable}`}>
-      <div className={`flexbox mx-12 mt-24 flex-col md:ml-12`}>
-        <h1 className="font-lora text-4xl font-semibold">Code Projects.</h1>
-        <h2 className="font-lora mt-2 text-2xl font-bold md:mr-24">
-         Some Hobby Projects
-        </h2>
-        <p className="mt-12">I open-source almost anything as I am just having a great time coding. Let&apos;s make magic.</p>
-      </div>
+
+<div className="relative">
+  <div
+    className="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+    
+  ></div>
+  <div className="flex flex-col items-start bg-white bg-opacity-80 rounded-lg shadow-md p-8 mt-24 mx-12 md:ml-12 relative" style={{ backgroundImage: 'url("/bg/bg1.jpg")', backgroundSize: 'cover', backgroundBlendMode: 'lighten', backgroundColor: `rgba(255, 255, 255, ${opacity})` }}>
+            <h1 className="font-lora text-4xl font-semibold mb-2">Code Projects.</h1>
+    <h2 className="font-lora text-2xl font-bold md:mr-24">Some Hobby Projects</h2>
+    <p className="mt-8">I open-source almost anything as I am just having a great time coding. Let's make magic.</p>
+  </div>
+</div>
+
       <section className={`mx-12 flex h-screen flex-col gap-6 pb-8 pt-6 md:py-10 ${lora.variable}`}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <CodeProject 
