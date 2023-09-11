@@ -72,7 +72,7 @@ export function CodeProject({
                 <div className="mt-4 text-xl font-semibold"> 
                 <h2 className="mb-4">{projectName}</h2>
               </div>
-              <div className="mt-4 text-md font-semibold"> 
+              <div className="text-md mt-4 font-semibold"> 
                 <h2 className="mb-4">Technologies: {technologies}</h2>
               </div>
               <div className="mt-4 text-xs"> 
