@@ -121,7 +121,7 @@ export default function Table({ filmsData }: Props) {
             </TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody>
+        <TableBody >
           {paginatedGroups.map((group) => (
             <React.Fragment key={group.type}>
               {group.films
@@ -142,7 +142,7 @@ export default function Table({ filmsData }: Props) {
                 })
                 .map((film) => (
                   <TableRow key={film.title}>
-                    <TableCell>{film.date}</TableCell>
+                    <TableCell className="text-xs">{film.date}</TableCell>
                     <TableCell className="font-medium">{film.title}</TableCell>
                     <TableCell>{film.director}</TableCell>
                     <TableCell>{film.dop}</TableCell>

@@ -56,8 +56,8 @@ export default function FilmCV() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="relative">
   <div className="bg-opacity-80/80 relative mx-12 mt-12 flex flex-col items-start rounded-lg bg-white p-8 shadow-md md:ml-12" style={{ backgroundImage: 'url("/bg/bg1.jpg")', backgroundSize: 'cover', backgroundBlendMode: 'lighten', backgroundColor: `rgba(255, 255, 255, ${opacity})` }}>
-            <h1 className="font-lora mb-2 text-4xl font-semibold">Grip Resume.</h1>
-            <h2 className="font-lora text-2xl font-bold md:mr-24">Some Hobby Projects. View my <Link href="github.com/mattrichmo" className="text-accent hover:underline">Github</Link> for my most up to date project list.</h2>    <p className="mt-8">I open-source almost anything as I am just having a great time coding. Let&apos;s make magic.</p>
+            <h1 className="font-lora mb-2 text-4xl font-semibold">Seasoned, but not crusty, grip. </h1>
+            <h2 className="font-lora text-2xl font-bold md:mr-24">I love to build, so if you hsve crazy shot ideas then let&apos;s do it. </h2>
   </div>
 </div>
       <div className='mb-12 ml-4 mr-4'>
