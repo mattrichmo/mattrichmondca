@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import Table from "@/app/about/film-cv/components/table";
 import Link from "next/link";
+import { useTheme } from "next-themes"
+
 
 export default function FilmCV() {
   // Define the Film type inline
@@ -14,6 +16,12 @@ export default function FilmCV() {
     role: string;
     type: string;
   };
+
+  const { theme } = useTheme()
+  const opacity = theme === "dark" ? 0.1 : 0.5
+
+
+  const blendMode = theme === "dark" ? "darken" : "lighten"
 
   const [filmsData, setFilmsData] = useState<Film[]>([]);
 
@@ -46,16 +54,12 @@ export default function FilmCV() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mb-24 flex max-w-[980px] flex-col items-start gap-4">
-        <h1 className="mx-4 text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl" style={{ lineHeight: "1.5" }}>
-          Seasoned, <br className="hidden sm:inline" />
-          but not Crusty, Grip. <br className="hidden sm:inline" /> Let&apos;s build cool shots. <br className="hidden sm:inline" />
-          
-        </h1>
-      </div>
-      <h2 className="mx-4 mb-12 text-2xl font-extrabold leading-tight tracking-tighter md:text-3xl" style={{ lineHeight: "1.5" }}>
-        Grip Resume 
-      </h2>
+      <div className="relative">
+  <div className="bg-opacity-80/80 relative mx-12 mt-12 flex flex-col items-start rounded-lg bg-white p-8 shadow-md md:ml-12" style={{ backgroundImage: 'url("/bg/bg1.jpg")', backgroundSize: 'cover', backgroundBlendMode: 'lighten', backgroundColor: `rgba(255, 255, 255, ${opacity})` }}>
+            <h1 className="font-lora mb-2 text-4xl font-semibold">Grip Resume.</h1>
+            <h2 className="font-lora text-2xl font-bold md:mr-24">Some Hobby Projects. View my <Link href="github.com/mattrichmo" className="text-accent hover:underline">Github</Link> for my most up to date project list.</h2>    <p className="mt-8">I open-source almost anything as I am just having a great time coding. Let&apos;s make magic.</p>
+  </div>
+</div>
       <div className='mb-12 ml-4 mr-4'>
       <Table filmsData={filmsData} />
       </div>

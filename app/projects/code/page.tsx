@@ -43,10 +43,6 @@ export default function CodeProjectPage() {
     <div className={`flexbox flex-col items-center ${lora.variable}`}>
 
 <div className="relative">
-  <div
-    className="absolute left-0 top-0 h-full w-full bg-cover bg-center"
-    
-  ></div>
   <div className="bg-opacity-80/80 relative mx-12 mt-24 flex flex-col items-start rounded-lg bg-white p-8 shadow-md md:ml-12" style={{ backgroundImage: 'url("/bg/bg1.jpg")', backgroundSize: 'cover', backgroundBlendMode: 'lighten', backgroundColor: `rgba(255, 255, 255, ${opacity})` }}>
             <h1 className="font-lora mb-2 text-4xl font-semibold">Code Projects.</h1>
             <h2 className="font-lora text-2xl font-bold md:mr-24">Some Hobby Projects. View my <Link href="github.com/mattrichmo" className="text-accent hover:underline">Github</Link> for my most up to date project list.</h2>    <p className="mt-8">I open-source almost anything as I am just having a great time coding. Let&apos;s make magic.</p>
