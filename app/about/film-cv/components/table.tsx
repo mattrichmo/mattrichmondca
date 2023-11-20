@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {
   Table as UITable,
@@ -10,7 +11,6 @@ import {
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 
-// Define the Film interface
 interface Film {
   date: string;
   title: string;
@@ -21,40 +21,22 @@ interface Film {
   type: string;
 }
 
-// Define the Props interface
 interface Props {
   filmsData: Film[];
+  id: string;  // Add this line
 }
 
-// Define the Table component
 export default function Table({ filmsData }: Props) {
-  // Define state variables for sorting and pagination
   const [sortColumn, setSortColumn] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
-  // Group the films by type
-  const groups = filmsData.reduce(
-    (acc, film) => {
-      const group = acc.find((g) => g.type === film.type);
-      if (group) {
-        group.films.push(film);
-      } else {
-        acc.push({ type: film.type, films: [film] });
-      }
-      return acc;
-    },
-    [] as { type: string; films: Film[] }[]
-  );
-
-  // Paginate the groups of films
-  const paginatedGroups = groups.slice(
+  const paginatedFilms = filmsData.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
 
-  // Function to handle column sorting
   function handleSort(column: string) {
     if (sortColumn === column) {
       setSortDirection(sortDirection === "asc" ? "desc" : "asc");
@@ -64,7 +46,6 @@ export default function Table({ filmsData }: Props) {
     }
   }
 
-  // Render the table component
   return (
     <div>
       <UITable className="mt-12">
@@ -121,37 +102,17 @@ export default function Table({ filmsData }: Props) {
             </TableHead>
           </TableRow>
         </TableHeader>
-        <TableBody >
-          {paginatedGroups.map((group) => (
-            <React.Fragment key={group.type}>
-              {group.films
-                .slice()
-                .sort((a, b) => {
-                  if (sortColumn === null) {
-                    return 0;
-                  }
-                  const aValue = a[sortColumn as keyof Film];
-                  const bValue = b[sortColumn as keyof Film];
-                  if (aValue < bValue) {
-                    return sortDirection === "asc" ? -1 : 1;
-                  } else if (aValue > bValue) {
-                    return sortDirection === "asc" ? 1 : -1;
-                  } else {
-                    return 0;
-                  }
-                })
-                .map((film) => (
-                  <TableRow key={film.title}>
-                    <TableCell className="text-xs">{film.date}</TableCell>
-                    <TableCell className="font-medium">{film.title}</TableCell>
-                    <TableCell>{film.director}</TableCell>
-                    <TableCell>{film.dop}</TableCell>
-                    <TableCell>{film.keyGrip}</TableCell>
-                    <TableCell>{film.role}</TableCell>
-                    <TableCell>{film.type}</TableCell>
-                  </TableRow>
-                ))}
-            </React.Fragment>
+        <TableBody>
+          {paginatedFilms.map((film) => (
+            <TableRow key={film.title}>
+              <TableCell className="text-xs">{film.date}</TableCell>
+              <TableCell className="font-medium">{film.title}</TableCell>
+              <TableCell>{film.director}</TableCell>
+              <TableCell>{film.dop}</TableCell>
+              <TableCell>{film.keyGrip}</TableCell>
+              <TableCell>{film.role}</TableCell>
+              <TableCell>{film.type}</TableCell>
+            </TableRow>
           ))}
         </TableBody>
       </UITable>
@@ -169,7 +130,7 @@ export default function Table({ filmsData }: Props) {
             variant="outline"
             size="sm"
             onClick={() => setCurrentPage(currentPage + 1)}
-            disabled={currentPage === Math.ceil(groups.length / itemsPerPage)}
+            disabled={currentPage === Math.ceil(filmsData.length / itemsPerPage)}
           >
             Next
           </Button>

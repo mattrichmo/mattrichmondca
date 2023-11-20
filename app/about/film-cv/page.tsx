@@ -1,12 +1,9 @@
-"use client"
+'use client'
 import React, { useState, useEffect } from "react";
 import Table from "@/app/about/film-cv/components/table";
-import Link from "next/link";
 import { useTheme } from "next-themes"
 
-
 export default function FilmCV() {
-  // Define the Film type inline
   type Film = {
     date: string;
     title: string;
@@ -19,8 +16,6 @@ export default function FilmCV() {
 
   const { theme } = useTheme()
   const opacity = theme === "dark" ? 0.1 : 0.5
-
-
   const blendMode = theme === "dark" ? "darken" : "lighten"
 
   const [filmsData, setFilmsData] = useState<Film[]>([]);
@@ -53,16 +48,24 @@ export default function FilmCV() {
   }, []);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div className="relative">
-  <div className="bg-opacity-80/80 relative mx-12 mt-12 flex flex-col items-start rounded-lg bg-white p-8 shadow-md md:ml-12" style={{ backgroundImage: 'url("/bg/bg1.jpg")', backgroundSize: 'cover', backgroundBlendMode: 'lighten', backgroundColor: `rgba(255, 255, 255, ${opacity})` }}>
-            <h1 className="font-lora mb-2 text-4xl font-semibold">Seasoned, but not crusty, grip. </h1>
-            <h2 className="font-lora text-2xl font-bold md:mr-24">I love to build, so if you hsve crazy shot ideas then let&apos;s do it. </h2>
-  </div>
-</div>
-      <div className='mb-12 ml-4 mr-4'>
-      <Table filmsData={filmsData} />
+    <section className="mx-12 flex h-screen flex-col items-center gap-6 pb-4 pt-6 sm:ml-4 md:py-10">
+      <div className="xs:mt-6">
+        <div className="flex max-w-[980px] flex-col items-start gap-4">
+          <h1 className="ml-12 mt-8 text-left text-2xl leading-tight tracking-tighter md:text-3xl" style={{ lineHeight: "1.5", fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
+            Seasoned Yet Not Crusty - Key Grip
+          </h1>
+          <p className="ml-12 mt-6 text-lg" style={{ fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
+            I love to build, love to rig and love to plan for those crazy shot ideas. If you have a crazy project idea, I&apos;d  love to hear about it.
+          </p>
+          <div className='mx-4 mb-12'>
+          <h2 className="ml-8 mt-12 text-left text-xl leading-tight tracking-tighter md:text-xl" style={{ lineHeight: "1.5", fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
+            Grip Resume
+          </h2>
+            <Table filmsData={filmsData} id="myTable"/>
+          </div>
+        </div>
       </div>
-    </div>
-  );
+    </section>
+   );
+   
 }
