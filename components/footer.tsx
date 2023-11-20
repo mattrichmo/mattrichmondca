@@ -23,8 +23,8 @@ export function SiteFooter() {
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:justify-end">
-            <div className="text-right">
+          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:justify-start">
+            <div className="text-left">
               <p className="font-medium">Projects</p>
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
@@ -49,7 +49,7 @@ export function SiteFooter() {
                 </li>
               </ul>
             </div>
-            <div className="text-right">
+            <div className="text-left">
               <p className="font-medium">Me</p>
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
