@@ -5,12 +5,12 @@ import Image from 'next/image';
 
 export default function PinnedProjects() {
     return (
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl font-bold mb-8">Pinned Projects</h1>
+      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <h1 className="mb-8 text-3xl font-bold">Pinned Projects</h1>
         <div className="flex flex-wrap justify-center">
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+          <div className="w-full p-4 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3">
             <Link href="/project/1">
-              <div className="relative block cursor-pointer border border-gray-300 rounded-lg overflow-hidden">
+              <div className="relative block cursor-pointer overflow-hidden rounded-lg border border-gray-300">
                 <Card>
                   <div className="relative h-0" style={{ paddingBottom: '66.67%' }}>
                     <Image
@@ -19,9 +19,9 @@ export default function PinnedProjects() {
                       objectFit="cover"
                       alt="Card background"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-50 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity hover:opacity-50"></div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="absolute inset-x-0 bottom-0 p-4">
                     <CardTitle>Card 1</CardTitle>
                     <p className="text-gray-500">Card content goes here</p>
                   </div>
@@ -29,9 +29,9 @@ export default function PinnedProjects() {
               </div>
             </Link>
           </div>
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+          <div className="w-full p-4 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3">
             <Link href="/project/2">
-              <div className="relative block cursor-pointer border border-gray-300 rounded-lg overflow-hidden">
+              <div className="relative block cursor-pointer overflow-hidden rounded-lg border border-gray-300">
                 <Card>
                   <div className="relative h-0" style={{ paddingBottom: '66.67%' }}>
                     <Image
@@ -40,9 +40,9 @@ export default function PinnedProjects() {
                       objectFit="cover"
                       alt="Card background"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-50 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity hover:opacity-50"></div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="absolute inset-x-0 bottom-0 p-4">
                     <CardTitle>Card 2</CardTitle>
                     <p className="text-gray-500">Card content goes here</p>
                   </div>
@@ -50,9 +50,9 @@ export default function PinnedProjects() {
               </div>
             </Link>
           </div>
-          <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
+          <div className="w-full p-4 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3">
             <Link href="/project/3">
-              <div className="relative block cursor-pointer border border-gray-300 rounded-lg overflow-hidden">
+              <div className="relative block cursor-pointer overflow-hidden rounded-lg border border-gray-300">
                 <Card>
                   <div className="relative h-0" style={{ paddingBottom: '66.67%' }}>
                     <Image
@@ -61,9 +61,9 @@ export default function PinnedProjects() {
                       objectFit="cover"
                       alt="Card background"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-50 transition-opacity"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 transition-opacity hover:opacity-50"></div>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <div className="absolute inset-x-0 bottom-0 p-4">
                     <CardTitle>Card 3</CardTitle>
                     <p className="text-gray-500">Card content goes here</p>
                   </div>

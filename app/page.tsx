@@ -6,27 +6,27 @@ export default function IndexPage() {
     <section className="mx-12 flex h-screen flex-col items-center gap-6 pb-4 pt-6 sm:ml-4 md:py-10">
       <div className="xs:mt-6">
         <div className="flex max-w-[980px] flex-col items-start gap-4">
-          <h1 className="mt-8 ml-12 text-left text-2xl leading-tight tracking-tighter md:text-3xl" style={{ lineHeight: "1.5", fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
+          <h1 className="ml-12 mt-8 text-left text-2xl leading-tight tracking-tighter md:text-3xl" style={{ lineHeight: "1.5", fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
             Hi, My Name Is Matt. <br className="hidden sm:inline" />
             This is my website, and it&apos;s continually under development, and always changing as I try new technologies out. <br />
             To get a better idea of who I am, you can check out my
-            <Link href={siteConfig.links.github} className="mx-1 underline hover:text-link-hover hover:underline">
+            <Link href={siteConfig.links.github} className="hover:text-link-hover mx-1 underline hover:underline">
               GitHub,
             </Link>
-            <Link href={siteConfig.links.pexels} className="mx-1 underline hover:text-link-hover hover:underline">
+            <Link href={siteConfig.links.pexels} className="hover:text-link-hover mx-1 underline hover:underline">
               My Photography,
             </Link>
-            <Link href={siteConfig.links.instagram} className="mx-1 underline hover:text-link-hover hover:underline">
+            <Link href={siteConfig.links.instagram} className="hover:text-link-hover mx-1 underline hover:underline">
               IG,
             </Link>
             or, 
-            <Link href={siteConfig.links.linkedin} className="mx-1 underline hover:text-link-hover hover:underline">
+            <Link href={siteConfig.links.linkedin} className="hover:text-link-hover mx-1 underline hover:underline">
               Linkedin.
             </Link>
           </h1>
           <h2 className="sm:text-md ml-12 text-center text-lg tracking-tighter sm:text-left" style={{ fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
             Or alternatively, view my 
-            <Link href="/about/film-cv" className="mx-1 underline hover:link-hover hover:underline">
+            <Link href="/about/film-cv" className="hover:link-hover mx-1 underline hover:underline">
               Grip Resume
             </Link>
           </h2>

@@ -19,7 +19,7 @@ export default function Carousel() {
 
   return (
     <>
-    <div className="mx-auto max-w-screen-xl px-8 mt-24">
+    <div className="mx-auto mt-24 max-w-screen-xl px-8">
 
       <Lightbox
         index={index}

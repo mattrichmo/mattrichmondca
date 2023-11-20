@@ -15,9 +15,9 @@ export function SiteFooter() {
   <p className="mt-4  max-w-xs text-left text-sm sm:text-left sm:text-base">
     &quot;Learn The Rules Like a Pro, So You Can Break Them Like an Artist.&quot; <br /> - Pablo Picasso or maybe Buddha
   </p>
-  <p className="text-sm font-semibold tracking-tighter sm:text-left mt-2">
+  <p className="mt-2 text-sm font-semibold tracking-tighter sm:text-left">
             Found a typo or bug? 
-            <Link href="https://github.com/mattrichmo/mattrichmondca" target="_blank" className="text-xs font-semibold hover:underline ml-1">
+            <Link href="https://github.com/mattrichmo/mattrichmondca" target="_blank" className="ml-1 text-xs font-semibold hover:underline">
                submit a pull request or issue here. 
             </Link> </p>
 </div>
