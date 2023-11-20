@@ -15,6 +15,10 @@ export const siteConfig = {
       title: "Contact",
       href: "/contact"
 
+    },
+    {
+      title: "Grip Resume",
+      href: "/about/film-cv"
     }
   ],
   links: {
