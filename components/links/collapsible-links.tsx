@@ -23,7 +23,8 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode }, { has
       return (
         <div>
           <h2>Something went wrong in CollapsibleLink component.</h2>
-          <p>{this.state.error?.toString() || 'Unknown error'}</p>        </div>
+          <p>{this.state.error?.toString() || 'Unknown error'}</p>
+        </div>
       );
     }
     return this.props.children;
@@ -53,7 +54,7 @@ export function CollapsibleLink({
   return (
     <ErrorBoundary>
       <Collapsible>
-        <div className={`my-2 flex flex-col bg-secondary ${isExpanded ? 'h-auto py-3' : 'h-16'} items-center justify-center rounded-lg border-2 border-b-4 border-l-4 border-black px-4 shadow-xl transition-all duration-500 `}>
+        <div className={`my-2 flex flex-col bg-secondary ${isExpanded ? 'h-auto py-3' : 'h-16'} items-center justify-center rounded-lg border-2 border-b-4 border-l-4 border-black px-4 shadow-xl transition-all duration-500`}>
           <div className="w-full">
             <div className="flex items-center justify-between">
               <Link href={link}>
