@@ -71,11 +71,11 @@ function BannerSlider() {
         ))}
       </div>
       <div className="absolute left-0 top-0 flex h-full w-full flex-row items-center justify-between opacity-0 transition-opacity duration-300 hover:opacity-100" style={{ zIndex: 3 }}>
-        <button className="bg-black bg-opacity-50 px-4 py-2 text-2xl text-white hover:bg-opacity-75" onClick={handlePrevClick}>Prev</button>
-        <button className="bg-black bg-opacity-50 px-4 py-2 text-2xl text-white hover:bg-opacity-75" onClick={handleNextClick}>Next</button>
+        <button className="bg-black bg-opacity-[50] px-4 py-2 text-2xl text-white hover:bg-opacity-[75]" onClick={handlePrevClick}>Prev</button>
+        <button className="bg-black bg-opacity-[50] px-4 py-2 text-2xl text-white hover:bg-opacity-[75]" onClick={handleNextClick}>Next</button>
       </div>
       {showGallery && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-90">
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-800 bg-opacity-[90]">
           <div className="grid grid-cols-3 gap-2">
             {bannerSlides.map((slide, index) => (
               <div
