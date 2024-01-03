@@ -1,7 +1,6 @@
 "use client"
 import { useState } from "react";
 import Link from 'next/link';
-import Image from 'next/image';
 import { Icons } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
@@ -50,35 +49,6 @@ export default function LinkListPage() {
   </div>
 </div>
 
-
-      <CollapsibleLink 
-        link={siteConfig.links.pexels} 
-        title="Giving Away My Photos For Free on Pexels" 
-        description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   
-        icon={<Icons.camera className="w-8"/>} 
-        linkText="pexels.com"
-      />
-      <CollapsibleLink 
-        link={siteConfig.links.unsplash} 
-        title="Giving Away My Photos on Unsplash" 
-        description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   
-        icon={<Icons.camera className="w-8"/>} 
-        linkText="unsplash.com"
-      />
-      <CollapsibleLink 
-        link={siteConfig.links.github} 
-        title="ScreenParse - Node.JS Screenplay Parser" 
-        description="A Node.JS PDF Screenplay Parser, which parses text PDF Screenplays into a JSON Object and uploads to a DB"   
-        icon={<Icons.gitHub className="w-8"/>} 
-        linkText="github.com"
-      />
-      <CollapsibleLink 
-        link={siteConfig.links.github} 
-        title="WiseWriter V3 - Automated Content Generation" 
-        description="WiseWriter V3 was an interesting experiment in full-automation of a product from pre-product, product launch to post-product that includes audience research, topic generation, content generation in a 5D array recursively to main content and direction, book cover generation and uploading to Sales Channels."   
-        icon={<Icons.gitHub className="w-8"/>} 
-        linkText="github.com"
-      />
       <CollapsibleLink 
         link={"/about/film-cv"} 
         title="Grip Resume" 
@@ -86,6 +56,49 @@ export default function LinkListPage() {
         icon={<div className="flex"><Icons.grip className="w-8"/> <Icons.video className="w-8"/></div>} 
         linkText="mattrichmond.ca"
       />
+      <CollapsibleLink 
+        link={siteConfig.links.pexels} 
+        title="Download My Photography for Free On Pexels" 
+        description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   
+        icon={<Icons.camera className="w-8"/>} 
+        linkText="pexels.com"
+      />
+      <CollapsibleLink 
+        link={siteConfig.links.unsplash} 
+        title="Download My Photography for Free On Unsplash" 
+        description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   
+        icon={<Icons.camera className="w-8"/>} 
+        linkText="unsplash.com"
+      />
+      <CollapsibleLink 
+        link="https://github.com/mattrichmo/ScreenParse" 
+        title="ScreenParseV2 - Node.JS Screenplay Parser" 
+        description="A Node.JS PDF Screenplay Parser, which parses text PDF Screenplays into a JSON Object and uploads to a DB"   
+        icon={<Icons.gitHub className="w-8"/>} 
+        linkText="github.com"
+      />
+      <CollapsibleLink 
+        link="https://github.com/mattrichmo/wisewriterv3" 
+        title="WiseWriter V3 - Automated Book Creation (Open Source)" 
+        description="WiseWriter V3 was an interesting experiment in full-automation of a product from pre-product, product launch to post-product that includes audience research, topic generation, content generation in a 5D array recursively to main content and direction, book cover generation and uploading to Sales Channels."   
+        icon={<Icons.gitHub className="w-8"/>} 
+        linkText="github.com"
+      />
+            <CollapsibleLink 
+        link="https://github.com/mattrichmo/Brand-Bloom" 
+        title="Brand-Bloom (Open Source) - Brand Name Generator" 
+        description="Node.js flow that generates a brand name, scores that brand name against a weighted method, then recursively generates new names until either a brand name is found that scores above a certain threshold, or the number of iterations is reached, presenting you with the best brand name for your project or product."   
+        icon={<Icons.gitHub className="w-8"/>} 
+        linkText="github.com"
+      />
+                        <CollapsibleLink 
+        link="https://github.com/mattrichmo/PoemWriter" 
+        title="PoemWriter (Open Source) - Poem Book Generator" 
+        description="Node.js flow that generates a brand name, scores that brand name against a weighted method, then recursively generates new names until either a brand name is found that scores above a certain threshold, or the number of iterations is reached, presenting you with the best brand name for your project or product."   
+        icon={<Icons.gitHub className="w-8"/>} 
+        linkText="github.com"
+      />
+
       <CollapsibleLink 
         link={siteConfig.links.home} 
         title="Homepage" 

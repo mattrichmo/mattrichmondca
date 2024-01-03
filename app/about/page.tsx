@@ -7,22 +7,19 @@ export default function AboutPage() {
       <div className="xs:mt-6 max-w-[980px]">
         <div className="flex flex-col items-start gap-4">
           <h1 className="ml-0 mt-8 text-left text-2xl leading-tight tracking-tighter md:text-3xl" style={{ lineHeight: "1.5", fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
-            Hi, I&apos;m Matt.
+            Hello! I&apos;m Matt, a Grip in the film industry with a deep passion for photography, creating, and coding.
           </h1>
-          <h2 className="text-md ml-0 mt-2 leading-tight tracking-tighter md:text-2xl" style={{ lineHeight: "1.5", fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
-            I am a Grip in the film industry, and I love photography, design, and code.
-          </h2>
           <p className="ml-0 mt-6 max-w-[800px] text-lg" style={{ fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
-            Throughout my journey, I&apos;ve truly embodied the roles of a &quot;Creator&quot; and &quot;Builder&quot;, traits that have defined my path. My recent experiences have been quite diverse; during the pandemic, I immersed myself in the Vancouver film industry as a Grip, contributing to the magic of visual storytelling behind the scenes. Before that, I found myself engaged in brand-building endeavors within the dynamic landscape of Aurora Cannabis. Reflecting on my journey, I ventured into entrepreneurship with my own company, a venture that might not have reached the heights I envisioned, but one that undoubtedly enriched me with invaluable lessons.
+            My journey in the film world really took off during a challenging global period, where I found my niche working behind the scenes in Vancouver. This was a time that tested and honed my storytelling abilities and allowed me to make a unique contribution to the art of visual storytelling. After this period, the industry faced another hurdle: the longest actor and writer strike in history. This unexpected twist reignited my long-standing interest in data and coding. It was a perfect chance to revisit and refine these skills, blending them with my film experience.
           </p>
           <p className="ml-0 mt-6 max-w-[800px] text-lg" style={{ fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
-            My earlier days were marked by a deep involvement in creating brands, an arena where my passion for shaping concepts into something substantial truly shone. Each step has added to my arsenal of skills—whether it was the art of crafting compelling narratives in the film industry, establishing resonant brand identities, or navigating the complexities of running a business.
+            My earlier days were marked by roles in branding and marketing at Aurora Cannabis, where I dived into the fast-paced world of brand building. I&apos;ve also ventured into entrepreneurship, launching my own business. While it didn&apos;t take off as I hoped, the experience was rich with lessons. Branding has always been a central aspect of my work. I thrive on turning ideas into tangible, resonant brands. This path has equipped me with a diverse skill set, from crafting narratives in film to developing strong brand identities and navigating business complexities.
           </p>
           <h2 className="text-md ml-0 mt-6 leading-tight tracking-tighter md:text-2xl" style={{ lineHeight: "1.5", fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
-            Happiest When Creating With Like-minded People
+            What really excites me is collaborating with other creative minds.
           </h2>
           <p className="ml-0 mt-6 max-w-[800px] text-lg" style={{ fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
-            As I gaze ahead, my enthusiasm for both creating and building remains undiminished. I am driven to channel my creativity and drive into future projects that embody this innate passion. There&apos;s an undeniable thrill in taking an idea, nurturing it, and bringing it into existence. With my background as a testament to my dedication, I eagerly anticipate the opportunity to continue this journey of transforming imagination into reality, leaving a trail of meaningful accomplishments along the way.
+            There&apos;s a special thrill in bringing an idea to life, nurturing it from concept to reality. With such a varied background, I&apos;m looking forward to what the future holds – more creative projects, more innovation, and more impactful accomplishments.
           </p>
         </div>
       </div>

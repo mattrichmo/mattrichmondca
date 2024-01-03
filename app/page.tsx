@@ -10,10 +10,10 @@ export default function IndexPage() {
             Hi, My Name Is Matt. <br className="hidden sm:inline" />
             This is my website, and it&apos;s continually under development, always changing as I try new technologies out. <br />
             To get a better idea of who I am, you can check out my
-            <Link href={siteConfig.links.github} className="hover:text-link-hover mx-1 underline hover:underline">
+            <Link href={siteConfig.links.github} className="hover:text-link-hover mx-1 underline">
               GitHub,
             </Link>
-            <Link href={siteConfig.links.pexels} className="hover:text-link-hover mx-1 underline hover:underline">
+            <Link href={siteConfig.links.pexels} className="hover:link-hover mx-1 underline hover:underline">
               My Photography,
             </Link>
             <Link href={siteConfig.links.instagram} className="hover:text-link-hover mx-1 underline hover:underline">

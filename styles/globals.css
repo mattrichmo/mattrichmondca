@@ -4,59 +4,61 @@
 
 @layer base {
   :root {
-    /* Background color */
-    --background: hsl(102, 40%, 89%);
+    /* New Background color */
+    --background: hsl(155, 11%, 58%);
 
-    /* Foreground text color */
-    --foreground: hsl(36, 10%, 20%);
+    /* Foreground text color (High contrast for readability) */
+    --foreground: hsl(155, 30%, 15%); /* Darker shade for contrast */
 
-    /* Muted background color */
-    --muted: hsl(36, 5%, 95%);
-    /* Muted foreground text color */
-    --muted-foreground: hsl(36, 40%, 30%);
+    /* Muted background color (Complimentary) */
+    --muted: hsl(155, 11%, 68%); /* Lighter shade of background */
 
-    /* Popover background color */
-    --popover: hsl(0, 0%, 100%);
-    /* Popover foreground text color */
-    --popover-foreground: hsl(36, 10%, 20%);
+    /* Muted foreground text color (Contrasty) */
+    --muted-foreground: hsl(155, 30%, 30%); /* Dark but less than foreground */
 
-    /* Border and input colors */
-    --border: hsl(36, 20%, 90%);
-    --input: hsl(36, 20%, 90%);
+    /* Popover background color (Complimentary) */
+    --popover: hsl(155, 11%, 75%); /* Even lighter shade of background */
 
-    /* Card colors */
-    --card: hsl(0, 0%, 100%);
-    /* Card foreground text color */
-    --card-foreground: hsl(36, 10%, 20%);
+    /* Popover foreground text color (Contrasty) */
+    --popover-foreground: hsl(155, 30%, 20%); /* Dark for readability */
 
-    /* Primary colors */
-    --primary: hsl(36, 10%, 20%);
-    /* Primary foreground text color */
-    --primary-foreground: hsl(36, 5%, 98%);
+    /* Border and input colors (Complimentary) */
+    --border: hsl(155, 20%, 80%);
+    --input: hsl(155, 20%, 80%);
 
-    /* Secondary colors */
-    --secondary: hsl(36, 5%, 95%);
-    /* Secondary foreground text color */
-    --secondary-foreground: hsl(36, 10%, 20%);
+    /* Card colors (Complimentary) */
+    --card: hsl(155, 11%, 70%);
+    /* Card foreground text color (Contrasty) */
+    --card-foreground: hsl(155, 30%, 20%);
 
-    /* Accent colors */
-    --accent: hsl(36, 5%, 95%);
-    /* Accent foreground text color */
-    --accent-foreground: hsl(36, 10%, 20%);
+    /* Primary colors (Complimentary) */
+    --primary: hsl(155, 30%, 50%);
+    /* Primary foreground text color (Contrasty) */
+    --primary-foreground: hsl(155, 30%, 90%);
 
-    /* Destructive colors */
-    --destructive: hsl(0, 100%, 50%);
+    /* Secondary colors (Complimentary) */
+    --secondary: hsl(155, 15%, 65%);
+    /* Secondary foreground text color (Contrasty) */
+    --secondary-foreground: hsl(155, 40%, 25%);
+
+    /* Accent colors (Complimentary) */
+    --accent: hsl(155, 15%, 65%);
+    /* Accent foreground text color (Contrasty) */
+    --accent-foreground: hsl(155, 40%, 25%);
+
+    /* Destructive colors (High contrast) */
+    --destructive: hsl(0, 100%, 50%); /* Kept the same for standard red */
     /* Destructive foreground text color */
-    --destructive-foreground: hsl(36, 5%, 98%);
+    --destructive-foreground: hsl(155, 30%, 98%); /* Very light for contrast */
 
-    /* Ring color */
-    --ring: hsl(36, 20%, 65%);
+    /* Ring color (Contrasty) */
+    --ring: hsl(155, 40%, 40%); /* Darker for visibility */
 
     /* Border radius */
     --radius: 0.5rem;
 
-    /* Link hover color */
-    --link-hover: hsl(205, 54%, 78%); /* Light Blue */
+    /* Link hover color (Complimentary with a bit of contrast) */
+    --link-hover: #BBAB8B; /* Adjusted to match the background's hue */
   }
 
   .dark {
@@ -92,9 +94,9 @@
   
     --radius: 0.5rem;
   }
-}
-
-@layer base {
+  .hover\:text-link-hover:hover {
+    color: var(--link-hover);
+  }
   * {
     @apply border-border;
   }
