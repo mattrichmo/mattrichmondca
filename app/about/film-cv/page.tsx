@@ -53,7 +53,7 @@ export default function FilmCV() {
     <section className="mx-4 flex flex-col items-center gap-6 pb-4 pt-6 md:mx-12 md:py-10">
       <div className="xs:mt-6 max-w-full">
         <h1 className="ml-2 mt-8 text-left text-2xl leading-tight tracking-tighter md:ml-12 md:text-3xl">
-          Seasoned Yet Not Crusty <br />Key Grip For Hire
+          Grip Resume.
         </h1>
         <p className="ml-2 mt-6 text-lg md:ml-12">
           I love to build, love to rig, and love to plan for those crazy shot
