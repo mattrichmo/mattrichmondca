@@ -34,7 +34,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+      <link rel="stylesheet" href="tufte.css"/>
+      </head>
       <body
         className={cn(
           "flex min-h-screen flex-col  font-sans antialiased",

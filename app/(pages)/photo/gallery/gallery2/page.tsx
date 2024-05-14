@@ -3,7 +3,7 @@ import * as React from "react";
 
 import Lightbox from "yet-another-react-lightbox";
 import Inline from "yet-another-react-lightbox/plugins/inline";
-import slides from "@/app/photo/data/slides";
+import slides from "@/app/(pages)/photo/data/slides";
 import "yet-another-react-lightbox/styles.css";
 
 

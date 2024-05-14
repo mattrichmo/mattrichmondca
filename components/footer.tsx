@@ -12,13 +12,13 @@ export function SiteFooter() {
               <Icons.logo className="h-8 w-8" />
               <span className="inline-block text-lg font-bold">{siteConfig.name}</span>
             </div>
-            <p className="mt-4 max-w-xs text-left text-sm sm:text-left sm:text-base">
+            <p className="mt-2 max-w-xs text-left text-sm sm:text-left sm:text-base">
               &quot;Learn The Rules Like a Pro, So You Can Break Them Like an Artist.&quot; <br /> - Pablo Picasso or maybe Buddha
             </p>
             <p className="mt-2 text-sm font-semibold tracking-tighter sm:text-left">
               Found a typo or bug? 
               <Link href="https://github.com/mattrichmo/mattrichmondca" target="_blank" className="ml-1 text-xs font-semibold hover:underline">
-                submit a pull request or issue here. 
+                submit an issue here. 
               </Link>
             </p>
           </div>
@@ -28,9 +28,6 @@ export function SiteFooter() {
               <p className="font-medium">Projects</p>
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
-                  <Link href="/projects" className="hover:opacity-75">
-                    What I&apos;m Working On Now
-                  </Link>
                 </li>
                 <li>
                   <Link href="/projects/code" className="hover:opacity-75">
@@ -46,6 +43,7 @@ export function SiteFooter() {
                   <Link href="/projects/creative" className="hover:opacity-75">
                     Creative
                   </Link>
+                  
                 </li>
               </ul>
             </div>
@@ -63,7 +61,7 @@ export function SiteFooter() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/film-cv" className="hover:opacity-75">
+                  <Link href="/about/grip" className="hover:opacity-75">
                     Grip Resume
                   </Link>
                 </li>

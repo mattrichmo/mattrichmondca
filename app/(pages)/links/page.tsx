@@ -10,19 +10,18 @@ export default function LinkListPage() {
   return (
     <section className="mx-4 flex-col rounded-3xl px-4 py-6">
       <div className="text-center">
-        <p className="pt-2 text-2xl font-medium">@mattrichmo</p>
+        <p className="pt-2 text-2xl font-bold mb-2">@mattrichmo</p>
         <p className="text-sm">Just some stuff I&apos;m proud of or working on.</p>
       </div>
       <div className="flex items-center justify-center">
   <div className="flex-grid xs:p-6 my-3 flex-col p-4">
     <Link href={siteConfig.links.instagram}>
-      <Button className="duration-900 xs:mx-2 h-10 w-10 rounded-full bg-background text-foreground hover:bg-secondary sm:h-8 sm:w-8">
-        <div className="flex h-32 w-32 items-center justify-center">
+      <Button className="duration-900 mx-2 h-10 w-10 rounded-full bg-background text-foreground hover:-translate-y-3 hover:bg-secondary">
+        <div className="flex h-32 w-32 items-center justify-center hover:text-primary">
           <Icons.instagram size={24} className="hover:text-primary" />
         </div>
       </Button>
     </Link>
-
     <Link href={siteConfig.links.github}>
       <Button className="duration-900 mx-2 h-10 w-10 rounded-full bg-background text-foreground hover:-translate-y-3 hover:bg-secondary">
         <div className="flex h-32 w-32 items-center justify-center hover:text-primary">
@@ -30,7 +29,6 @@ export default function LinkListPage() {
         </div>
       </Button>
     </Link>
-
     <Link href={siteConfig.links.facebook}>
       <Button className="duration-900 mx-2 h-10 w-10 rounded-full bg-background text-foreground hover:-translate-y-3 hover:bg-secondary">
         <div className="flex h-32 w-32 items-center justify-center hover:text-primary">
@@ -49,13 +47,22 @@ export default function LinkListPage() {
   </div>
 </div>
 
+    <div>
+      <h2 className="text-center text-lg font-medium mt-2 mb-4">
+        Film
+      </h2>
       <CollapsibleLink 
-        link={"/about/film-cv"} 
+        link={"/about/grip"} 
         title="Grip Resume" 
         description="An ongoing list of the productions I have Gripped on."   
         icon={<div className="flex"><Icons.grip className="w-8"/> <Icons.video className="w-8"/></div>} 
         linkText="mattrichmond.ca"
       />
+      </div>
+      <div>
+      <h2 className="text-center text-lg font-medium mt-4 mb-4">
+        Photography
+      </h2>
       <CollapsibleLink 
         link={siteConfig.links.pexels} 
         title="Download My Photography for Free On Pexels" 
@@ -70,6 +77,11 @@ export default function LinkListPage() {
         icon={<Icons.camera className="w-8"/>} 
         linkText="unsplash.com"
       />
+      </div>
+      <div>
+        <h2 className="text-center text-lg font-medium mt-4 mb-4">
+          Code
+        </h2>
       <CollapsibleLink 
         link="https://github.com/mattrichmo/ScreenParse" 
         title="ScreenParseV2 - Node.JS Screenplay Parser" 
@@ -98,6 +110,12 @@ export default function LinkListPage() {
         icon={<Icons.gitHub className="w-8"/>} 
         linkText="github.com"
       />
+      </div>
+
+      <div>
+      <h2 className="text-center text-lg font-medium mt-4 mb-4">
+        Web
+      </h2>
 
       <CollapsibleLink 
         link={siteConfig.links.home} 
@@ -106,6 +124,7 @@ export default function LinkListPage() {
         icon={<Icons.logo className="mt-2 w-8"/>} 
         linkText="mattrichmond.ca"
       />
+      </div>
     </section>
   );
 }

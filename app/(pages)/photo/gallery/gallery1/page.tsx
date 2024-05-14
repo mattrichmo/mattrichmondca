@@ -2,7 +2,7 @@
 import * as React from "react";
 import PhotoAlbum from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
-import slides from "@/app/photo/data/slides";
+import slides from "@/app/(pages)/photo/data/slides";
 import "yet-another-react-lightbox/styles.css";
 
 export default function Gallery1() {

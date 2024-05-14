@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="xs:mt-6 max-w-[980px]">
         <div className="flex flex-col items-start gap-4">
           <h1 className="ml-0 mt-8 text-left text-2xl leading-tight tracking-tighter md:text-3xl" style={{ lineHeight: "1.5", fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
-            Hello! I&apos;m Matt, a Grip in the film industry with a deep passion for photography, creating, and coding.
+            Welcome to my evolving website where I experiment with new technologies and share my creative journey.
           </h1>
           <p className="ml-0 mt-6 max-w-[800px] text-lg" style={{ fontFamily: "ETBembo, Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif", fontWeight: "normal" }}>
             My journey in the film world really took off during a challenging global period, where I found my niche working behind the scenes in Vancouver. This was a time that tested and honed my storytelling abilities and allowed me to make a unique contribution to the art of visual storytelling. After this period, the industry faced another hurdle: the longest actor and writer strike in history. This unexpected twist reignited my long-standing interest in data and coding. It was a perfect chance to revisit and refine these skills, blending them with my film experience.
