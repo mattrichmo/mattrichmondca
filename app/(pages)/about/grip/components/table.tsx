@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import {
   Table as UITable,
   TableBody,
@@ -34,13 +34,13 @@ export default function Table({ filmsData, id }: Props) {
   const itemsPerPage = 20;
 
   // Function to sort the data based on column and direction
-  const sortData = (column: keyof Film, direction: "asc" | "desc") => {
+  const sortData = useCallback((column: keyof Film, direction: "asc" | "desc") => {
     filmsData.sort((a, b) => {
       if (a[column] < b[column]) return direction === "asc" ? -1 : 1;
       if (a[column] > b[column]) return direction === "asc" ? 1 : -1;
       return 0;
     });
-  };
+  }, [filmsData]);
 
   // Sorting function that modifies the sorting state and sorts the data
   const handleSort = (column: keyof Film) => {

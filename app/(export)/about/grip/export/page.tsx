@@ -100,7 +100,7 @@ export default function FilmCV() {
           <div className="flex flex-col">
               <div>
                   <h1 className="text-3xl font-bold">Matt Richmond</h1>
-                  <h3 className="text-lg font-bold mt-2">Contact</h3>
+                  <h3 className="mt-2 text-lg font-bold ">Contact</h3>
                   <p className="text-sm">Email: hello@mattrichmond.ca</p>
                   <p className="text-sm">Phone: (604) 989-3632</p>
               </div>
