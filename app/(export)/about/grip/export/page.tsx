@@ -111,7 +111,7 @@ export default function FilmCV() {
                   loading ? 'Preparing document...' : 'Download as PDF'}
               </PDFDownloadLink>
           </div>
-          <table className="w-full mt-4 text-xs">
+          <table className="mt-4 w-full text-xs">
               <thead>
                   <tr className="bg-gray-100">
                       <th className="p-2">Date</th>
