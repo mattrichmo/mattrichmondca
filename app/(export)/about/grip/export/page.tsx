@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 import dynamic from 'next/dynamic';
+import { Link } from "lucide-react";
 
 // Dynamically import PDFDownloadLink to ensure it is only loaded in the client-side
 const PDFDownloadLink = dynamic(() => import("@react-pdf/renderer").then(mod => mod.PDFDownloadLink), {
@@ -65,10 +66,12 @@ export default function FilmCV() {
     const FilmCVDocument = () => (
         <Document>
             <Page size="A4" style={{ flexDirection: 'column', padding: 30, fontFamily: 'Helvetica' }}>
-                <Text style={{ fontSize: 18, marginBottom: 10, textAlign: 'center', fontWeight: 'bold' }}>Matt Richmond</Text>
+                <Text style={{ fontSize: 18, marginBottom: 5, textAlign: 'center', fontWeight: 'bold' }}>Matt Richmond</Text>
+                <Text style={{ fontSize: 14, marginBottom: 10, textAlign: 'center', fontWeight: 'bold' }}>Key Grip / Great Vibes Dude</Text>
+
                 <View style={{ flexDirection: 'column', marginBottom: 10 }}>
-                    <Text style={{ fontSize: 14, marginTop: 6 }}>Key Grip</Text>
-                    <Text style={{ fontSize: 14, marginTop: 6, marginBottom: 6 }}>Vancouver, BC, Canada</Text>
+                    <Text style={{ fontSize: 12, marginTop: 6 }}>Love to Build, Love to Create</Text>
+                    <Text style={{ fontSize: 12, marginTop: 6, marginBottom: 6 }}>Vancouver, BC, Canada</Text>
                     <Text style={{ fontSize: 12 }}>Email: hello@mattrichmond.ca</Text>
                     <Text style={{ fontSize: 12 }}>Phone: (604) 989-3632</Text>
                 </View>
@@ -102,18 +105,28 @@ export default function FilmCV() {
     return (
         <div className="p-12">
             <div className="flex flex-col">
+                
+                <div className="mb-12 text-center ">
                 <div>
-                    <h1 className="text-3xl font-bold">Matt Richmond</h1>
-                    <h3 className="mt-2 text-lg font-bold ">Contact</h3>
+                        <a href="/about/grip/" className="underline">Go back</a>
+                    </div>
+                    <PDFDownloadLink document={<FilmCVDocument />} fileName="Matt Richmond - Grip CV.pdf">
+                        {({ blob, url, loading, error }) =>
+                            loading ? 'Preparing document...' : 'Download as PDF'
+                        }
+                    </PDFDownloadLink>
+
+                </div>
+                <div>
+                    <div className="text-center">
+                        <h1 className="text-3xl font-bold">Matt Richmond</h1>
+                        <h3 className="text-md mt-4">Key Grip / Great Vibes Dude</h3>
+                    </div>
+                    <h3 className="mt-2 text-lg font-bold">Contact</h3>
                     <p className="text-sm">Email: hello@mattrichmond.ca</p>
                     <p className="text-sm">Phone: (604) 989-3632</p>
                 </div>
-                <h2 className="text-md mt-4">Key Grip</h2>
                 <p className="text-sm">Vancouver Based Key Grip with a passion for building and creating innovative film sets.</p>
-                <PDFDownloadLink document={<FilmCVDocument />} fileName="Matt Richmond - Grip CV.pdf">
-                    {({ blob, url, loading, error }) =>
-                        loading ? 'Preparing document...' : 'Download as PDF'}
-                </PDFDownloadLink>
             </div>
             <table className="mt-4 w-full text-xs">
                 <thead>

@@ -64,6 +64,13 @@ export default function LinkListPage() {
         Photography
       </h2>
       <CollapsibleLink 
+        link={siteConfig.links.photography} 
+        title="Main Photography Site" 
+        description="My main photography site, seperated from my perosnal site and will be updated with more photos and projects as I go."   
+        icon={<Icons.camera className="w-8"/>} 
+        linkText="mattrichmo.com"
+      />
+      <CollapsibleLink 
         link={siteConfig.links.pexels} 
         title="Download My Photography for Free On Pexels" 
         description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   

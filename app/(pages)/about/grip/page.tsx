@@ -72,17 +72,16 @@ const formatDate = (date: string): string => {
     <section className="mx-4 flex flex-col items-center gap-6 pb-4 pt-6 md:mx-12 md:py-10">
       <div className="xs:mt-6 max-w-full">
         <h1 className="ml-2 mt-8 text-left text-2xl leading-tight tracking-tighter">
-          Key Grip Based in Vancouver, BC, Canada
+          Grip Based in Vancouver, BC, Canada
         </h1>
         <p className="ml-2 mt-6 text-lg">
           I love to build, love to rig, and love to plan for those crazy shot
           ideas. If you have a crazy project idea, I&apos;d love to hear about it.
         </p>
         <p className="ml-2 mt-6 text-sm">
-          Access To 10 Ton Trucks 
         </p>
         <div className="mx-2 mb-12 md:mx-4">
-          <p className="ml-2 mt-12 text-left text-md leading-tight tracking-tighter">
+          <p className="text-md ml-2 mt-12 text-left leading-tight tracking-tighter">
             Recent Work:
           </p>
         </div>

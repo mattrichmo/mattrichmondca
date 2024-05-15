@@ -18,7 +18,7 @@ export const siteConfig = {
     },
     {
       title: "Grip Resume",
-      href: "/about/film-cv"
+      href: "/about/grip"
     }
   ],
   links: {
@@ -32,6 +32,7 @@ export const siteConfig = {
     tiktok: "https://tiktok.com/mattrichmo",
     discord: "https://discord.com/#/",
     pexels: "https://www.pexels.com/@mattrichmo-314917881",
-    unsplash: "https://unsplash.com/@mattrichmo"
+    unsplash: "https://unsplash.com/@mattrichmo",
+    photography: "https://mattrichmo.com/"
   },
 }
