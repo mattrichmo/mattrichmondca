@@ -48,7 +48,7 @@ export default function LinkListPage() {
 </div>
 
     <div>
-      <h2 className="text-center text-lg font-medium mt-2 mb-4">
+      <h2 className="mb-4 mt-2 text-center text-lg font-medium">
         Film
       </h2>
       <CollapsibleLink 
@@ -60,11 +60,11 @@ export default function LinkListPage() {
       />
       </div>
       <div>
-      <h2 className="text-center text-lg font-medium mt-4 mb-4">
+      <h2 className="my-4 text-center text-lg font-medium">
         Photography
       </h2>
       <CollapsibleLink 
-        link={siteConfig.links.photography} 
+        link="https://mattrichmo.com"
         title="Main Photography Site" 
         description="My main photography site, seperated from my perosnal site and will be updated with more photos and projects as I go."   
         icon={<Icons.camera className="w-8"/>} 
@@ -86,7 +86,7 @@ export default function LinkListPage() {
       />
       </div>
       <div>
-        <h2 className="text-center text-lg font-medium mt-4 mb-4">
+        <h2 className="my-4 text-center text-lg font-medium">
           Code
         </h2>
       <CollapsibleLink 
@@ -120,7 +120,7 @@ export default function LinkListPage() {
       </div>
 
       <div>
-      <h2 className="text-center text-lg font-medium mt-4 mb-4">
+      <h2 className="my-4 text-center text-lg font-medium">
         Web
       </h2>
 
