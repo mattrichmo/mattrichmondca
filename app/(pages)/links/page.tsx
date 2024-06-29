@@ -79,6 +79,27 @@ export default function LinkListPage() {
       />
       </div>
       <div>
+      <h2 className="my-4 text-center text-lg font-medium">
+        Data Visualization
+      </h2>
+
+      <CollapsibleLink 
+        link="https://cinecompute.com/data/canadian-cinema-graph"
+        title="Canadian Cinema Graph" 
+        description="Mapping out the professional relationships and involvement of the Canadian Film Industry in a graph database. Useful to illustrate connectedness of of the industry."   
+        icon={<Icons.logo className="mt-2 w-8"/>} 
+        linkText="cinecompute.com"
+      />
+      <CollapsibleLink 
+        link="https://cinecompute.com/data/genre-heat-map"
+        title="Canadian Film Genre Heatmap" 
+        description="Mapping out the genres of all the films produced in Canada in the last # of years."   
+        icon={<Icons.logo className="mt-2 w-8"/>} 
+        linkText="cinecompute.com"
+      />
+      
+      </div>
+      <div>
         <h2 className="my-4 text-center text-lg font-medium">
           Code
         </h2>
