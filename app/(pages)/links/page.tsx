@@ -105,14 +105,14 @@ export default function LinkListPage() {
         </h2>
         <CollapsibleLink 
         link="https://github.com/mattrichmo/chalker" 
-        title="Chalker" 
-        description="Pretty Object logging using chalk and iterative color changes for each nested level. Great for debugging JS objects in the console. "   
+        title="Chalker - Object logging in the console made sexy." 
+        description="Object logging using chalk and iterative color changes for each nested level. Great for debugging JS objects in the console. "   
         icon={<Icons.gitHub className="w-8"/>} 
         linkText="github.com"
       />
        <CollapsibleLink 
         link="https://github.com/mattrichmo/BookMarker" 
-        title="BookMarker" 
+        title="BookMarker - Local Bookmark Backup" 
         description="Local bookmarks. Saves all bookmarks inside a .MD file. Great for local backup and storage of your bookmarks."   
         icon={<Icons.gitHub className="w-8"/>} 
         linkText="github.com"
