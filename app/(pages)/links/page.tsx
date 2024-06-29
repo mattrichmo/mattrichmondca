@@ -10,8 +10,8 @@ export default function LinkListPage() {
   return (
     <section className="mx-4 flex-col rounded-3xl px-4 py-6">
       <div className="text-center">
-        <p className="pt-2 text-2xl font-bold mb-2">@mattrichmo</p>
-        <p className="text-sm">Just some stuff I&apos;m proud of or working on.</p>
+        <p className="mb-2 pt-2 text-2xl font-bold">Matt Richmond</p>
+        <p className="text-sm">Some Links Of Stuff.</p>
       </div>
       <div className="flex items-center justify-center">
   <div className="flex-grid xs:p-6 my-3 flex-col p-4">
@@ -64,23 +64,16 @@ export default function LinkListPage() {
         Photography
       </h2>
       <CollapsibleLink 
-        link="https://mattrichmo.com"
-        title="Main Photography Site" 
-        description="My main photography site, seperated from my perosnal site and will be updated with more photos and projects as I go."   
-        icon={<Icons.camera className="w-8"/>} 
-        linkText="mattrichmo.com"
-      />
-      <CollapsibleLink 
         link={siteConfig.links.pexels} 
-        title="Download My Photography for Free On Pexels" 
-        description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   
+        title="Open-Source Photos On Pexels" 
+        description="Open-source creativity is inspiring which is why I post most of my photos for free-use on Pexels. All photos can be used for any purpose with no credit here."   
         icon={<Icons.camera className="w-8"/>} 
         linkText="pexels.com"
       />
       <CollapsibleLink 
         link={siteConfig.links.unsplash} 
-        title="Download My Photography for Free On Unsplash" 
-        description="I post most of my photos for free to use for any purpose, including commercial. I figure, they are just going to sit in a folder anyways so I may as well aim to inspire others."   
+        title="Open-Source Photos On Unsplash" 
+        description="Pexels - another site I publish my pictures for free use on, but less frequently. "   
         icon={<Icons.camera className="w-8"/>} 
         linkText="unsplash.com"
       />
@@ -89,6 +82,27 @@ export default function LinkListPage() {
         <h2 className="my-4 text-center text-lg font-medium">
           Code
         </h2>
+        <CollapsibleLink 
+        link="https://github.com/mattrichmo/chalker" 
+        title="Chalker" 
+        description="Pretty Object logging using chalk and iterative color changes for each nested level. Great for debugging JS objects in the console. "   
+        icon={<Icons.gitHub className="w-8"/>} 
+        linkText="github.com"
+      />
+       <CollapsibleLink 
+        link="https://github.com/mattrichmo/BookMarker" 
+        title="BookMarker" 
+        description="Local bookmarks. Saves all bookmarks inside a .MD file. Great for local backup and storage of your bookmarks."   
+        icon={<Icons.gitHub className="w-8"/>} 
+        linkText="github.com"
+      />
+        <CollapsibleLink 
+        link="https://github.com/mattrichmo/NERM" 
+        title="NERM - Netflix Engagement Report Matcher" 
+        description="Combining provided Netflix engagement reports with additional sources to create a full data set of all the titles within the engagement report. Great for people who plan to build their own data sets. "   
+        icon={<Icons.gitHub className="w-8"/>} 
+        linkText="github.com"
+      />
       <CollapsibleLink 
         link="https://github.com/mattrichmo/ScreenParse" 
         title="ScreenParseV2 - Node.JS Screenplay Parser" 
@@ -98,40 +112,45 @@ export default function LinkListPage() {
       />
       <CollapsibleLink 
         link="https://github.com/mattrichmo/wisewriterv3" 
-        title="WiseWriter V3 - Automated Book Creation (Open Source)" 
+        title="WiseWriter V3 - Automated Book Creation (Open Source) (Broken but Code Logic is there)" 
         description="WiseWriter V3 was an interesting experiment in full-automation of a product from pre-product, product launch to post-product that includes audience research, topic generation, content generation in a 5D array recursively to main content and direction, book cover generation and uploading to Sales Channels."   
         icon={<Icons.gitHub className="w-8"/>} 
         linkText="github.com"
       />
-            <CollapsibleLink 
+      <CollapsibleLink 
         link="https://github.com/mattrichmo/Brand-Bloom" 
-        title="Brand-Bloom (Open Source) - Brand Name Generator" 
+        title="Brand-Bloom (Open Source) - Brand Name Generator (Experiment)" 
         description="Node.js flow that generates a brand name, scores that brand name against a weighted method, then recursively generates new names until either a brand name is found that scores above a certain threshold, or the number of iterations is reached, presenting you with the best brand name for your project or product."   
         icon={<Icons.gitHub className="w-8"/>} 
         linkText="github.com"
       />
-                        <CollapsibleLink 
+      <CollapsibleLink 
         link="https://github.com/mattrichmo/PoemWriter" 
         title="PoemWriter (Open Source) - Poem Book Generator" 
         description="Node.js flow that generates a brand name, scores that brand name against a weighted method, then recursively generates new names until either a brand name is found that scores above a certain threshold, or the number of iterations is reached, presenting you with the best brand name for your project or product."   
         icon={<Icons.gitHub className="w-8"/>} 
         linkText="github.com"
       />
-      </div>
 
-      <div>
-      <h2 className="my-4 text-center text-lg font-medium">
+      </div>
+      
+
+        
+        <div>
+        <h2 className="my-4 text-center text-lg font-medium">
         Web
-      </h2>
+        </h2>
 
-      <CollapsibleLink 
-        link={siteConfig.links.home} 
-        title="Homepage" 
-        description="My little spot on the net. Full of errors and bugs, and changes more than I change my socks, but I use this as a testing ground for new technologies and ideas."   
-        icon={<Icons.logo className="mt-2 w-8"/>} 
-        linkText="mattrichmond.ca"
-      />
-      </div>
+        <CollapsibleLink 
+          link={siteConfig.links.home} 
+          title="Homepage" 
+          description="My little spot on the net. Full of errors and bugs, and changes more than I change my socks, but I use this as a testing ground for new technologies and ideas."   
+          icon={<Icons.logo className="mt-2 w-8"/>} 
+          linkText="mattrichmond.ca"
+        />
+
+        </div>
+
     </section>
   );
 }
